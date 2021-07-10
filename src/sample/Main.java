@@ -1,5 +1,6 @@
 package sample;
 
+import Game.Player;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,10 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main extends Application {
+    public static ArrayList<Player> players=new ArrayList<>();
+    public static Player playercurent ;
     public static PlayerInformation playerInformation=new PlayerInformation();
     static AnchorPane root;
     static List<Pane>grid=new ArrayList<>();
     private static int idx_cur=0;
+    public static String robat;
 //   public ArrayList<Scene>scenes=new ArrayList<>();
 //    public Stage windwo=new Stage();
 
@@ -27,7 +31,10 @@ public class Main extends Application {
 
             grid.add((Pane) FXMLLoader.load(getClass().getResource("sample.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("SignUp.fxml")));
-            root.getChildren().add(grid.get(0));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("Valkyrie.fxml")));
+
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("TrainingCamp.fxml")));
+            root.getChildren().add(grid.get(3));
             Scene scene=new Scene(root,430,630);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -58,6 +65,24 @@ public class Main extends Application {
         root.getChildren().add(grid.get(idx));
         idx_cur=idx;
 
+    }
+    public static void setPlayercurent(String user)
+    {
+        for (Player p:players) {
+            if (user.equals(p.getUsername()))
+            {
+                 playercurent=p;
+            }
+
+        }
+    }
+    public static  void addPlayer(String user)
+    {
+        players.add(new Player(user));
+    }
+
+    public static void setRobat(String robat) {
+        Main.robat = robat;
     }
 
     public static void main(String[] args) {

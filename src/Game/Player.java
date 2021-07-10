@@ -3,12 +3,16 @@ package Game;
 import java.util.ArrayList;
 
 public class Player {
+    private  String username="";
+    private int level=0;
     private ArrayList<Card> card=new ArrayList();
     public ArrayList<Card> existCard=new ArrayList();
     public ArrayList<Tower> towers=new ArrayList();
+
     private int xp=0;
 
-    public Player () {
+    public Player (String username) {
+        username=this.username;
           existCard.add(new Barbarians());
           existCard.add(new Archer());
           existCard.add(new BabyDragon());
@@ -30,6 +34,14 @@ public class Player {
         return xp;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public ArrayList<Card> getExistCard() {
         return existCard;
     }
@@ -42,17 +54,22 @@ public class Player {
     {
         if (xp >= 0 && xp < 500)
         {
+            level=1;
             return 1;
         }if (xp >= 500 && xp < 900)
         {
+            level=2;
             return 2;
         }if (xp >= 900 && xp < 1700)
         {
+            level=3;
             return 3;
         }if (xp >= 1700 && xp < 2500)
         {
+            level=4;
             return 4;
         }
+        level=5;
         return 5;
     }
 }
