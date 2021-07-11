@@ -31,11 +31,11 @@ public class Main extends Application {
             root=(AnchorPane) FXMLLoader.load(getClass().getResource("1.fxml"));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("sample.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("SignUp.fxml")));
-            grid.add((Pane) FXMLLoader.load(getClass().getResource("Valkyrie.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("mainPageClashRoyale.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("BattleDeck.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("TrainingCamp.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("Profile.fxml")));
-            root.getChildren().add(grid.get(5));
+            root.getChildren().add(grid.get(2));
             Scene scene=new Scene(root,500,800);
             primaryStage.setScene(scene);
             primaryStage.show();

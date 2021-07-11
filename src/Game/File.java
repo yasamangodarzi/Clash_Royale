@@ -1,6 +1,6 @@
 package Game;
 
-import ir.huri.jcal.JalaliCalendar;
+//import ir.huri.jcal.JalaliCalendar;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -18,12 +18,12 @@ public class File {
     public void CreatFilePlayer() throws FileNotFoundException {
         String theEndResultOfGame = null;
         FileUtils file = new FileUtils();
-        JalaliCalendar jalaliCalendar = new JalaliCalendar();
+          JalaliCalendar jalaliCalendar = new JalaliCalendar();
         if(ResultGame)
             theEndResultOfGame = "Winner";
         else
             theEndResultOfGame = "Loser";
-        InformationPlayer information = new InformationPlayer(theEndResultOfGame, HandsOfCards, jalaliCalendar.toString());
+         InformationPlayer information = new InformationPlayer(theEndResultOfGame, HandsOfCards, jalaliCalendar.toString());
         file.creatDirectory("F:/ClashRoyal");
         file.writeObject("F:/ClashRoyal/" + Level + ".txt", information);
     }
