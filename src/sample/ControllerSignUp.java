@@ -38,9 +38,9 @@ public class ControllerSignUp {
         {
             String user=UserName.getText();
             Main.playerInformation.addPlayer(Name.getText(),UserName.getText(),Password.getText());
-            Main.addPlayer(user);
             Main.setPlayercurent(user);
             Result.setText("connected");
+            Main.set(2);
 
 
         }

@@ -5,20 +5,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMainPageClashRoyal">
 
     <children>
         <Pane layoutX="-3.0" prefHeight="675.0" prefWidth="506.0">
             <children>
 
-                <ImageView fitHeight="800.0" fitWidth="500.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="795.0" fitWidth="506.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true">
 
                     <image>
                         <Image url="@Game Home.jpg" />
                     </image>
                 </ImageView>
 
-                <ImageView fitHeight="110.0" fitWidth="95.0" layoutX="211.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="battleDeck" fitHeight="110.0" fitWidth="95.0" layoutX="211.0" layoutY="558.0" onMousePressed="#BattleDeck" pickOnBounds="true" preserveRatio="true">
 
                     <image>
                         <Image url="@card.gif" />
@@ -32,14 +32,14 @@
                     </image>
                 </ImageView>
 
-                <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="313.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="profile" fitHeight="88.0" fitWidth="88.0" layoutX="313.0" layoutY="628.0" onMousePressed="#Profile" pickOnBounds="true" preserveRatio="true">
 
                     <image>
                         <Image url="@profile-gif-Res.gif" />
                     </image>
                 </ImageView>
 
-                <ImageView fitHeight="80.0" fitWidth="112.0" layoutX="96.0" layoutY="626.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="trainingCamp" fitHeight="80.0" fitWidth="112.0" layoutX="96.0" layoutY="626.0" onMousePressed="#TrainingCamp" pickOnBounds="true" preserveRatio="true">
 
                     <image>
                         <Image url="@but-gif1.gif" />
@@ -53,7 +53,7 @@
                     </image>
                 </ImageView>
 
-                <ImageView fitHeight="99.0" fitWidth="182.0" layoutX="-30.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="oneVoneTwoVtwo" fitHeight="99.0" fitWidth="182.0" layoutX="-30.0" layoutY="594.0" onMousePressed="#OneVoneTwoVtwo" pickOnBounds="true" preserveRatio="true">
 
                     <image>
                         <Image url="@1v1-2v2-gif.gif" />
@@ -67,7 +67,7 @@
                     </image>
                 </ImageView>
 
-                <ImageView fitHeight="88.0" fitWidth="91.0" layoutX="400.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="buttleHistory" fitHeight="88.0" fitWidth="91.0" layoutX="400.0" layoutY="598.0" onMousePressed="#ButtleHistory" pickOnBounds="true" preserveRatio="true">
 
                     <image>
                         <Image url="@ResGifHistoryGame.gif" />

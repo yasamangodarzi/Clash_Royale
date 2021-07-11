@@ -12,6 +12,7 @@ public class Player {
     private int xp=0;
 
     public Player (String username) {
+        level=level();
          this.username=username;
           existCard.add(new Barbarians());
           existCard.add(new Archer());
@@ -57,7 +58,7 @@ public class Player {
     }
     public int level()
     {
-        if (xp >= 0 && xp < 500)
+        if (xp >= -1 && xp < 500)
         {
             level=1;
             return 1;
@@ -76,5 +77,17 @@ public class Player {
         }
         level=5;
         return 5;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "username='" + username + '\'' +
+                ", level=" + level +
+                ", card=" + card +
+                ", existCard=" + existCard +
+                ", towers=" + towers +
+                ", xp=" + xp +
+                '}';
     }
 }

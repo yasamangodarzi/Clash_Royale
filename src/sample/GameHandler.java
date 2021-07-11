@@ -117,4 +117,8 @@ public class GameHandler {
             System.out.println(c.toString());
         }
     }
+    public void showPlayer()
+    {
+        System.out.println(player.toString());
+    }
 }

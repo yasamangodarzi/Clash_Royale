@@ -14,20 +14,20 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerLogIn">
     <children>
-        <ImageView fitHeight="660.0" fitWidth="434.0" pickOnBounds="true">
+        <ImageView fitHeight="830.0" fitWidth="500.0" pickOnBounds="true">
             <image>
                 <Image url="@1.jpg" />
             </image>
         </ImageView>
-        <GridPane layoutX="100.0" layoutY="150.0" prefHeight="308.0" prefWidth="253.0" translateX="-20.0" translateY="-50.0">
+        <GridPane layoutX="154.0" layoutY="211.0" prefHeight="308.0" prefWidth="253.0" translateX="-20.0" translateY="-50.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.3999481201172" minWidth="0.0" prefWidth="13.000024414062494" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.2" minWidth="10.0" prefWidth="168.1999755859375" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="148.8000061035156" minHeight="10.0" prefHeight="76.00001831054688" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="169.59999389648436" minHeight="10.0" prefHeight="88.40000610351565" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="136.40001220703124" minHeight="10.0" prefHeight="86.99998168945311" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="169.59999389648436" minHeight="10.0" prefHeight="93.40000610351562" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="136.40001220703124" minHeight="10.0" prefHeight="72.59999389648439" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="112.4" minHeight="10.0" prefHeight="75.80001831054688" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>

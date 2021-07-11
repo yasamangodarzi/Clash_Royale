@@ -35,7 +35,9 @@ public class Main extends Application {
             grid.add((Pane) FXMLLoader.load(getClass().getResource("BattleDeck.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("TrainingCamp.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("Profile.fxml")));
-            root.getChildren().add(grid.get(2));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("OneVoneTwoVtwo.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("BattleHistory.fxml")));
+            root.getChildren().add(grid.get(0));
             Scene scene=new Scene(root,500,800);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -76,6 +78,9 @@ public class Main extends Application {
             }
 
         }
+        addPlayer(user);
+        gameHandler.setPlayer(new Player(user));
+        gameHandler.showPlayer();
     }
     public static  void addPlayer(String user)
     {

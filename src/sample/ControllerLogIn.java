@@ -39,6 +39,7 @@ public class ControllerLogIn {
         if (result.equalsIgnoreCase("connected")){
             userWrong.setText(result);
         Main.setPlayercurent(username);
+        Main.set(2);
         }
 
 

@@ -125,7 +125,7 @@ public class ContorollerBattleDeck {
 
     @FXML
     void Back(MouseEvent event) {
-        Main.set(1);
+        Main.set(2);
 
     }
 

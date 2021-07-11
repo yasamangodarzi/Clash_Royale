@@ -28,7 +28,7 @@ public class ControllerMainPageClashRoyal {
      */
     @FXML
     void BattleDeck(MouseEvent event) {
-//        Main.set();
+         Main.set(3);
     }
 
        /**
@@ -37,7 +37,7 @@ public class ControllerMainPageClashRoyal {
      */
     @FXML
     void ButtleHistory(MouseEvent event) {
-//        Main.set();
+        Main.set(7);
     }
 
 
@@ -47,7 +47,7 @@ public class ControllerMainPageClashRoyal {
      */
     @FXML
     void OneVoneTwoVtwo(MouseEvent event) {
-//        Main.set();
+         Main.set(6);
     }
 
         /**
@@ -56,7 +56,7 @@ public class ControllerMainPageClashRoyal {
      */
     @FXML
     void Profile(MouseEvent event) {
-//        Main.set();
+        Main.set(5);
     }
 
        /**
@@ -65,7 +65,7 @@ public class ControllerMainPageClashRoyal {
      */
     @FXML
     void TrainingCamp(MouseEvent event) {
-//        Main.set();
+        Main.set(4);
     }
 
 

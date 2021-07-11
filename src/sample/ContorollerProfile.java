@@ -61,7 +61,19 @@ public class ContorollerProfile {
 
     @FXML
     void Back(MouseEvent event) {
-      Main.set(1);
+        Socer.setText("");
+        Usrname.setText("");
+        Level.setText("");
+        card1.setText("");
+        card2.setText("");
+        card3.setText( "");
+        card4.setText( "");
+        card5.setText("");
+        card6.setText("");
+        card7.setText("");
+        card8.setText("");
+
+      Main.set(2);
     }
 
     @FXML
