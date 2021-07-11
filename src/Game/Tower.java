@@ -51,27 +51,4 @@ public   class Tower extends Playground{
 //    }
 
 
-    public List<String> DetectProximityTargetTower(int RowOrigin, int ColumnOrigin,
-                                              int DestinationRow, int DestinationColumn,
-                                              String CardName){
-        double ResultRowDifference = Math.pow((DestinationRow - RowOrigin), 2);
-        double ResultColumnDifference = Math.pow((DestinationColumn - ColumnOrigin), 2);
-        double distance = Math.sqrt(((int) ResultRowDifference + (int) ResultColumnDifference));
-        Space.add((int) distance);
-        GoalsDistance.computeIfAbsent((int) distance, k ->new ArrayList<>()).add(CardName);
-        Collections.sort(Space);
-        ArrayList<Integer> SpaceSort = new ArrayList<>();
-        List<String> goal = new ArrayList<>();
-        for(int temp: Space) {
-            SpaceSort.add(temp);
-        }
-        goal.add(GoalsDistance.get(SpaceSort.get(0)).get(0));
-        for(int i = 1; i < SpaceSort.size(); i++){
-            if(SpaceSort.get(0).equals(SpaceSort.get(i))){
-                goal.add(GoalsDistance.get(SpaceSort.get(0)).get(i));
-            }
-        }
-        return goal;
-    }
-
 }

@@ -11,8 +11,5 @@ public class Card extends CommonGameData{
         this.cost = cost;
     }
 
-//    public List<String> DetectProximityTargetCard(){
-//
-//    }
 
 }

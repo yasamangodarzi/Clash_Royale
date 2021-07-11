@@ -12,4 +12,8 @@ public class Soldier extends Card{
     public void SoldierMove(){
 
     }
+
+    public Speed getSpeed() {
+        return speed;
+    }
 }
