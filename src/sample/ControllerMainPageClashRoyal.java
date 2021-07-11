@@ -22,27 +22,47 @@ public class ControllerMainPageClashRoyal {
     private ImageView buttleHistory;
 
 
+       /**
+     * Method with the ability to enter the page layout of cards in each level of with
+     * @param event 
+     */
     @FXML
     void BattleDeck(MouseEvent event) {
 //        Main.set();
     }
 
+       /**
+     * Method with the ability to enter the history of win and lose history in the game
+     * @param event 
+     */
     @FXML
     void ButtleHistory(MouseEvent event) {
 //        Main.set();
     }
 
 
+       /**
+     * Method with the ability to enter the game page two or one n
+     * @param event 
+     */
     @FXML
     void OneVoneTwoVtwo(MouseEvent event) {
 //        Main.set();
     }
 
+        /**
+     * Method with the ability to enter the profile
+     * @param event 
+     */
     @FXML
     void Profile(MouseEvent event) {
 //        Main.set();
     }
 
+       /**
+     * Method with the ability to enter the game page with the robot
+     * @param event 
+     */
     @FXML
     void TrainingCamp(MouseEvent event) {
 //        Main.set();
