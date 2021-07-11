@@ -6,29 +6,29 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerTrainingCamp">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerTrainingCamp">
    <children>
-      <ImageView fitHeight="638.0" fitWidth="442.0" layoutX="-9.0" layoutY="-4.0" pickOnBounds="true">
+      <ImageView fitHeight="800.0" fitWidth="600.0" layoutX="-9.0" layoutY="-4.0" pickOnBounds="true">
          <image>
             <Image url="@5zdHSF.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="SimpleRobot" layoutX="58.0" layoutY="161.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Simple robot" textFill="#fff8e1">
+      <Button fx:id="SimpleRobot" layoutX="96.0" layoutY="159.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Simple robot" textFill="#fff8e1">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="MediumRobot" layoutX="61.0" layoutY="274.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text=" Medium robot" textFill="#fff8e1">
+      <Button fx:id="MediumRobot" layoutX="96.0" layoutY="294.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text=" Medium robot" textFill="#fff8e1">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="IntelligentRobot" layoutX="58.0" layoutY="385.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Intelligent robot" textFill="#fff8e1">
+      <Button fx:id="IntelligentRobot" layoutX="103.0" layoutY="422.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Intelligent robot" textFill="#fff8e1">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="30.0" />
          </font>
       </Button>
-      <ImageView fx:id="Backimage" fitHeight="68.0" fitWidth="72.0" layoutX="44.0" layoutY="534.0" onMousePressed="#Back" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Backimage" fitHeight="68.0" fitWidth="72.0" layoutX="31.0" layoutY="700.0" onMousePressed="#Back" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@20210710_103719-removebg-preview.png" />
          </image>

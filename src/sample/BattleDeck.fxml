@@ -25,7 +25,7 @@
                   <Image url="@baby-dragon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="archer" fitHeight="101.0" fitWidth="91.0" layoutX="10.0" layoutY="10.0" onMousePressed="#SelectCard" pickOnBounds="true" preserveRatio="true" translateX="290.0">
+            <ImageView fx:id="Archer" fitHeight="101.0" fitWidth="91.0" layoutX="10.0" layoutY="10.0" onMousePressed="#SelectCard" pickOnBounds="true" preserveRatio="true" translateX="290.0">
                <image>
                   <Image url="@archers.png" />
                </image>
@@ -80,7 +80,7 @@
             </ImageView>
             <ImageView fx:id="rage" fitHeight="99.0" fitWidth="103.0" onMousePressed="#SelectCard" pickOnBounds="true" preserveRatio="true" translateX="-165.0">
                <image>
-                  <Image url="@RageCard%20(2).png" />
+                  <Image url="@rage.png" />
                </image>
             </ImageView>
             <ImageView fx:id="arrows" fitHeight="99.0" fitWidth="94.0" onMousePressed="#SelectCard" pickOnBounds="true" preserveRatio="true" translateX="-130.0">

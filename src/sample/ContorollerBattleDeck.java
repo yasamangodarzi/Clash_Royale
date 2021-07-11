@@ -30,8 +30,9 @@ public class ContorollerBattleDeck {
     @FXML // fx:id="babydragon"
     private ImageView babydragon; // Value injected by FXMLLoader
 
-    @FXML // fx:id="aecher"
-    private ImageView aecher; // Value injected by FXMLLoader
+    @FXML // fx:id="Archer"
+    private ImageView Archer; // Value injected by FXMLLoader
+
 
     @FXML // fx:id="Gisnt"
     private ImageView Gisnt; // Value injected by FXMLLoader
