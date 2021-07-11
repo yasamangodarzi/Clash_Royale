@@ -15,7 +15,6 @@ public class FileUtils {
     public void writeObject(String name, InformationPlayer Information) throws FileNotFoundException {
         try (FileOutputStream file = new FileOutputStream(name)) {
             ObjectOutputStream objectFile = new ObjectOutputStream(file);
-//            objectFile.writeObject(Information);
             objectFile.writeObject(Information.getData());
             objectFile.writeObject(Information.getHandsOfCards());
             objectFile.writeObject(Information.isResultGame());
