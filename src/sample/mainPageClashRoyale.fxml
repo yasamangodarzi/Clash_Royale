@@ -1,58 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
     <children>
-        <Pane layoutX="-3.0" prefHeight="675.0" prefWidth="465.0">
+        <Pane layoutX="-3.0" prefHeight="675.0" prefWidth="506.0">
             <children>
+
                 <ImageView fitHeight="800.0" fitWidth="500.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@Game Home.jpg" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="110.0" fitWidth="95.0" layoutX="211.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@card.gif" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="33.0" fitWidth="131.0" layoutX="191.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@CardName.png" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="313.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@profile-gif-Res.gif" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="80.0" fitWidth="112.0" layoutX="96.0" layoutY="626.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@but-gif1.gif" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="26.0" fitWidth="114.0" layoutX="96.0" layoutY="696.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@ButName.png" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="99.0" fitWidth="182.0" layoutX="-30.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@1v1-2v2-gif.gif" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="26.0" fitWidth="105.0" layoutX="5.0" layoutY="661.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@1v1-2v2.png" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="88.0" fitWidth="91.0" layoutX="400.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@ResGifHistoryGame.gif" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="26.0" fitWidth="105.0" layoutX="391.0" layoutY="664.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@HistoryGameName.png" />
                     </image>
@@ -112,7 +135,9 @@
                         <Image url="@55.png" />
                     </image>
                 </ImageView>
+
                 <ImageView fitHeight="24.0" fitWidth="105.0" layoutX="305.0" layoutY="698.0" pickOnBounds="true" preserveRatio="true">
+
                     <image>
                         <Image url="@ProfileName.png" />
                     </image>

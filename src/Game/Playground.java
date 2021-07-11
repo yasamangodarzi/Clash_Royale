@@ -24,6 +24,7 @@ public class Playground extends CommonGameData{
     public List<Card> DetectProximityTargetCard(int RowOrigin, int ColumnOrigin, int Range,
                                                 int DestinationRow, int DestinationColumn,
                                                 Card CardName, String Condition) {
+        
         List<Card> goal = new ArrayList<>();
         double distanceRes = 0;
         double ResultRowDifference = Math.pow((DestinationRow - RowOrigin), 2);

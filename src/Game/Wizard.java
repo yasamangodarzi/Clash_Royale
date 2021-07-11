@@ -9,6 +9,7 @@ public class Wizard extends Soldier{
         //Is Area Splash
         Count=1;
         cost=5;
+        setCardName("Wizard");
     }
 
     @Override

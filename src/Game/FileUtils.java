@@ -8,14 +8,13 @@ public class FileUtils {
     /**
      * This method has the ability to write to a file with a specific name
      *
-     * @param name        file name
+     * @param name file name
      * @param Information information of player
      * @throws FileNotFoundException
      */
     public void writeObject(String name, InformationPlayer Information) throws FileNotFoundException {
         try (FileOutputStream file = new FileOutputStream(name)) {
             ObjectOutputStream objectFile = new ObjectOutputStream(file);
-//            objectFile.writeObject(Information);
             objectFile.writeObject(Information.getData());
             objectFile.writeObject(Information.getHandsOfCards());
             objectFile.writeObject(Information.isResultGame());
@@ -27,7 +26,6 @@ public class FileUtils {
 
     /**
      * This method has the ability to read from a file with a specific name
-     *
      * @param name file name
      * @throws IOException
      */
@@ -46,7 +44,6 @@ public class FileUtils {
 
     /**
      * This method has the ability to create a directory
-     *
      * @param name name file
      */
     public void creatDirectory(String name) {
@@ -57,7 +54,6 @@ public class FileUtils {
 
     /**
      * This method has the ability to return a list of directories in a specific address
-     *
      * @param name name file
      * @return
      */
@@ -80,7 +76,6 @@ public class FileUtils {
 
     /**
      * This method has the ability to print a list of directories in a specific address
-     *
      * @param name name file
      */
     public void printListDirectory(String name) {

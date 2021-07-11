@@ -9,6 +9,7 @@ public class Giant extends Soldier{
         //Is Area Splash
         Count=1;
         cost=5;
+        setCardName("Giant");
     }
 
     @Override

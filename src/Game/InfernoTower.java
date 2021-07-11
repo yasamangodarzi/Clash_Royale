@@ -7,5 +7,6 @@ public class InfernoTower extends Building{
         //range
         lifeTime=40;
         cost=5;
+        setCardName("InfernoTower");
     }
 }

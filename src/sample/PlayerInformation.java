@@ -19,7 +19,7 @@ public class PlayerInformation {
           playerName.put(username,name);
           player.put(username,password);
     }
-    public   String check(String userName,String password)
+    public String check(String userName,String password)
     {
         Iterator iterator=player.entrySet().iterator();
         while (iterator.hasNext()) {
