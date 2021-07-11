@@ -10,6 +10,7 @@ public class Barbarians extends Soldier{
         //Is Area Splash
         Count=4;
         cost=5;
+        setCardName("Barbarians");
     }
 
     @Override

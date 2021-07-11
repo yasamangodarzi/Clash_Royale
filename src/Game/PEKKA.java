@@ -9,6 +9,7 @@ public class PEKKA extends Soldier {
         //Is Area Splash
         Count=1;
         cost=4;
+        setCardName("PEKKA");
     }
     @Override
     public String toString() {

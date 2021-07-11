@@ -9,6 +9,7 @@ public class Valkyrie extends Soldier{
         //Is Area Splash
         Count=1;
         cost=4;
+        setCardName("Valkyrie");
     }
     @Override
     public String toString() {

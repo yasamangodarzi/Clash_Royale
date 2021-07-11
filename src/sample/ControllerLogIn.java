@@ -32,9 +32,14 @@ public class ControllerLogIn {
 
     @FXML
     void LogIn(ActionEvent event) {
-        String result=Main.playerInformation.check(UserName.getText(),Password.getText());
+        String username=UserName.getText();
+        String result=Main.playerInformation.check(username,Password.getText());
        if (result.equalsIgnoreCase("Wrong password")){passwordWrong.setText(result);}
        if (result.equalsIgnoreCase("Username is incorrect")){userWrong.setText(result);}
+        if (result.equalsIgnoreCase("connected")){
+            userWrong.setText(result);
+        Main.setPlayercurent(username);
+        }
 
 
     }

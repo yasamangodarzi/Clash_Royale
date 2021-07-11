@@ -9,6 +9,7 @@ public class Archer extends Soldier{
         //Is Area Splash
         Count=2;
         cost=3;
+        setCardName("Archer");
     }
 
     @Override
