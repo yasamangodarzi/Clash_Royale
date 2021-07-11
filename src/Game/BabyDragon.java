@@ -9,6 +9,7 @@ public class BabyDragon extends Soldier{
         //Is Area Splash
         Count=1;
         cost=4;
+        setCardName("BabyDragon");
     }
 
     @Override

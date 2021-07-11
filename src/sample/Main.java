@@ -1,6 +1,6 @@
 package sample;
 
-import Game.Player;
+import Game.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,8 +15,9 @@ import java.util.List;
 
 public class Main extends Application {
     public static ArrayList<Player> players=new ArrayList<>();
-    public static Player playercurent ;
+    public static Player playercurent=new Player("yas");
     public static PlayerInformation playerInformation=new PlayerInformation();
+   public static GameHandler gameHandler=new GameHandler();
     static AnchorPane root;
     static List<Pane>grid=new ArrayList<>();
     private static int idx_cur=0;
@@ -28,14 +29,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         try {
             root=(AnchorPane) FXMLLoader.load(getClass().getResource("1.fxml"));
-
             grid.add((Pane) FXMLLoader.load(getClass().getResource("sample.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("SignUp.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("Valkyrie.fxml")));
-
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("BattleDeck.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("TrainingCamp.fxml")));
             root.getChildren().add(grid.get(3));
-            Scene scene=new Scene(root,430,630);
+            Scene scene=new Scene(root,500,800);
             primaryStage.setScene(scene);
             primaryStage.show();
 
@@ -84,9 +84,21 @@ public class Main extends Application {
     public static void setRobat(String robat) {
         Main.robat = robat;
     }
+    public static void ss()
+    {
+        playercurent.existCard.add(new Barbarians());
+        playercurent.existCard.add(new Valkyrie());
+        playercurent.existCard.add(new Archer());
+        playercurent.existCard.add(new InfernoTower());
+        playercurent.existCard.add(new Wizard());
+        playercurent.existCard.add(new Giant());
+        playercurent.existCard.add(new Cannon());
+        playercurent.existCard.add(new PEKKA());
+    }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }
 

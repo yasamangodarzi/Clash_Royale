@@ -20,6 +20,7 @@ public class Player {
           existCard.add(new Valkyrie());
           existCard.add(new Giant());
           existCard.add(new PEKKA());
+          existCard.add(new InfernoTower());
           towers.add(new KingTower());
           towers.add(new PrincessTower());
           towers.add(new PrincessTower());
@@ -36,6 +37,10 @@ public class Player {
 
     public String getUsername() {
         return username;
+    }
+
+    public int getLevel() {
+        return level;
     }
 
     public void setUsername(String username) {

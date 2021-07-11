@@ -128,7 +128,7 @@ public class Level {
                 switch (level) {
                     case 1: {
                         c.setHP(2000);
-                        c.setDamage(120);
+                        c.setDamage(126);
                         break;
                     }
                     case 2: {

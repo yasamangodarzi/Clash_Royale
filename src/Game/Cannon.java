@@ -7,5 +7,6 @@ public class Cannon extends Building{
         //range
         lifeTime=30;
         cost=6;
+        setCardName("Cannon");
     }
 }
