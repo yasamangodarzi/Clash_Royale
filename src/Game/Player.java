@@ -12,7 +12,7 @@ public class Player {
     private int xp=0;
 
     public Player (String username) {
-        username=this.username;
+         this.username=username;
           existCard.add(new Barbarians());
           existCard.add(new Archer());
           existCard.add(new BabyDragon());

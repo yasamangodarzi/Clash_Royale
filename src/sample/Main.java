@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Main extends Application {
     public static ArrayList<Player> players=new ArrayList<>();
-    public static Player playercurent=new Player("yas");
+    public static Player playercurent=new Player("yasaa");
     public static PlayerInformation playerInformation=new PlayerInformation();
    public static GameHandler gameHandler=new GameHandler();
     static AnchorPane root;
@@ -34,7 +34,8 @@ public class Main extends Application {
             grid.add((Pane) FXMLLoader.load(getClass().getResource("Valkyrie.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("BattleDeck.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("TrainingCamp.fxml")));
-            root.getChildren().add(grid.get(3));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("Profile.fxml")));
+            root.getChildren().add(grid.get(5));
             Scene scene=new Scene(root,500,800);
             primaryStage.setScene(scene);
             primaryStage.show();

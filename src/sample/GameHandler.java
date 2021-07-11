@@ -9,7 +9,7 @@ import java.util.Iterator;
 public class GameHandler {
     public ArrayList<Card> cards=new ArrayList<>();
 
-    public Player player=new Player("yas");
+    public Player player=new Player("Yas");
     public Level level=new Level();
 
     public GameHandler() {
