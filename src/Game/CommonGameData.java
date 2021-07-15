@@ -1,13 +1,16 @@
 package Game;
 
+import java.util.ArrayList;
+
 public class CommonGameData {
         //filed
-//    private Range
+     protected int Range;
     protected int Damage;
    protected int HP;
-    //
+   protected ArrayList<Card> OpponentCard=new ArrayList<>();
     protected double HitSpeed;
     protected Target target;
+    protected boolean alive=false;
     //If we are at the beginning of the game, its true, otherwise it is false, elixir = 4
     public boolean mode = true;
     //If we are in the last minute of the game, the value of this variable will be true and otherwise it is false;
@@ -45,4 +48,15 @@ public class CommonGameData {
             this.HP = HP;
         }
 
+    public int getRange() {
+        return Range;
+    }
+
+    public void setRange(int range) {
+        Range = range;
+    }
+    public void doAction()
+    {
+
+    }
 }
