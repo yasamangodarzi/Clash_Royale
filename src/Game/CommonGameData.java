@@ -28,9 +28,9 @@ public class CommonGameData {
         return target;
     }
 
-//    public void setTarget(Target target) {
-//        this.target = target;
-//    }
+   public void setTarget(Target target) {
+       this.target = target;
+   }
 
     public int getDamage() {
             return Damage;
