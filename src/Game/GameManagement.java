@@ -21,8 +21,6 @@ public class GameManagement {
          level.SetTower(player2.towers, player1.level());
 
     }
-
-
     public void StartGame(){
         long start = System.currentTimeMillis();
         int Different = 0;
