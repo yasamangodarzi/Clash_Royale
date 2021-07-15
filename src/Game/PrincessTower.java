@@ -25,9 +25,25 @@ public class PrincessTower extends Tower{
 //        LevelGameHP.put(4, 1750);
 //        LevelGameHP.put(5, 1890);
 //    }
-//    @Override
+ //  @Override
 //    public int HpLevel(int GameLevel) {
 //        HPSet();
 //        return LevelGameHP.get(GameLevel);
 //    }
+
+   @Override
+    public void doAction() {
+       int i=0;
+          if (OpponentCard.size()>0)
+          {
+             if (OpponentCard.get(i).alive)
+             {
+                 shoot(OpponentCard.get(i));
+             }else {i++;}
+          }
+    }
+    public void shoot(Card card)
+    {
+        card.HP-=this.Damage;
+    }
 }
