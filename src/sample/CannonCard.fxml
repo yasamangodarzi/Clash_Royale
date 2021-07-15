@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="500.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="500.0" pickOnBounds="true">
+               <image>
+                  <Image url="@backCannon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="385.0" fitWidth="322.0" layoutX="178.0" layoutY="415.0" pickOnBounds="true">
+               <image>
+                  <Image url="@cannonGif.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exit" fitHeight="55.0" fitWidth="55.0" layoutX="7.0" layoutY="675.0" onMousePressed="#Exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@no(exit).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rearIcon" fitHeight="60.0" fitWidth="60.0" layoutX="7.0" layoutY="734.0" onMousePressed="#RearIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@iconaghab-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
