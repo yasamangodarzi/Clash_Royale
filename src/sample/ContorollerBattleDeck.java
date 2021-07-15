@@ -10,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
 import java.util.ArrayList;
 
 public class ContorollerBattleDeck {
@@ -32,7 +31,6 @@ public class ContorollerBattleDeck {
 
     @FXML // fx:id="Archer"
     private ImageView Archer; // Value injected by FXMLLoader
-
 
     @FXML // fx:id="Gisnt"
     private ImageView Gisnt; // Value injected by FXMLLoader
