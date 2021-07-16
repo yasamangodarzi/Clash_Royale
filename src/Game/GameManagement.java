@@ -23,17 +23,20 @@ public class GameManagement {
 
 
     public void gameManagement(){
-        long start = System.currentTimeMillis();
+
+        long startTime = System.nanoTime();
         int Different = 0;
-        while(Different != 180){
+        long timeElapsed = 0;
+        while(timeElapsed != 180000){
             // Game Management
             //...
 
-            long end = System.currentTimeMillis();
-            long dif = end - start;
-            Different = (int) (dif * (0.001));
-            if (Different/2==0){elixirPlayer1.Change(true);}
-            if(Different == 120){
+
+            long endTime = System.nanoTime();
+            timeElapsed = (endTime - startTime) / 1000000;
+            Different = (int)timeElapsed / 1000;
+            if(Different/2==0){elixirPlayer1.Change(true);}
+            if(timeElapsed == 120000){
                 if (Different/2==0){elixirPlayer2.Change(false);}
 
             }
