@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CommonGameData {
     //filed
-    protected int Range;
+    protected double Range;
     protected int Damage;
     protected int HP;
     protected ArrayList<Card> OpponentCard=new ArrayList<>();

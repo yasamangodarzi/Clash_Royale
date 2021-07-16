@@ -1,9 +1,11 @@
 package Game;
 
 public class PrincessTower extends Tower{
-
-
-    //method
+    public PrincessTower() {
+        HitSpeed=0.8;
+        Range=7.5;
+    }
+//method
 //    public void DamageSet(){
 //        LevelGameDamage.put(1, 50);
 //        LevelGameDamage.put(2, 54);

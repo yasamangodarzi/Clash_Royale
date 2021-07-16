@@ -21,7 +21,7 @@ public   class Tower extends Playground{
     public Tower(){
 //        Range = 7;
 
-        HitSpeed = 1;
+       // HitSpeed = 1;
         HashMap<Integer, Integer>LevelGameHP = new HashMap<>();
         HashMap<Integer, Integer>LevelGameHitSpeed = new HashMap<>();
     }

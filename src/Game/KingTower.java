@@ -1,8 +1,9 @@
 package Game;
 
 public class KingTower extends Tower{
+    private boolean CanShoot=false;
     public KingTower() {
-        //range
+         Range=7;
         HitSpeed=1;
     }
     //    //method
@@ -32,4 +33,8 @@ public class KingTower extends Tower{
 //        HPSet();
 //        return LevelGameHP.get(GameLevel);
 //    }
+
+    public void setCanShoot(boolean canShoot) {
+        CanShoot = canShoot;
+    }
 }
