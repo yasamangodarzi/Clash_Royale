@@ -51,4 +51,14 @@ public   class Tower extends Playground{
 //    }
 
 
+    @Override
+    public String toString() {
+        return "Tower{" +
+                "Range=" + Range +
+                ", Damage=" + Damage +
+                ", HP=" + HP +
+                ", OpponentCard=" + OpponentCard +
+                ", alive=" + alive +
+                '}';
+    }
 }

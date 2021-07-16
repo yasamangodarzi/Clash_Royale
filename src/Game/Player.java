@@ -14,6 +14,11 @@ public class Player {
     public Player (String username) {
         level=level();
          this.username=username;
+         PrincessTower princessTower=new PrincessTower();
+         Barbarians barbarians=new Barbarians();
+         barbarians.alive=true;
+         barbarians.HP=100;
+         princessTower.OpponentCard.add(barbarians);
           existCard.add(new Barbarians());
           existCard.add(new Archer());
           existCard.add(new BabyDragon());
@@ -22,9 +27,9 @@ public class Player {
           existCard.add(new Giant());
           existCard.add(new PEKKA());
           existCard.add(new InfernoTower());
-          towers.add(new KingTower());
+          towers.add(new KingTower(level()));
           towers.add(new PrincessTower());
-          towers.add(new PrincessTower());
+          towers.add(princessTower);
 
     }
 
@@ -74,9 +79,12 @@ public class Player {
         {
             level=4;
             return 4;
-        }
+        } if (xp>2500)
+    {
         level=5;
         return 5;
+    }
+       return 0;
     }
 
     @Override
