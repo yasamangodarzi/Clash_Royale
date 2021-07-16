@@ -22,6 +22,8 @@ public class File {
 
           // JalaliCalendar jalaliCalendar = new JalaliCalendar();
 
+     
+     
         if(ResultGame)
             theEndResultOfGame = "Winner";
         else
