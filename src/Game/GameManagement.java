@@ -1,5 +1,7 @@
 package Game;
 
+import java.util.ArrayList;
+
 public class GameManagement {
     Level level=new Level();
     private Elixir elixirPlayer1=new Elixir();
@@ -30,9 +32,9 @@ public class GameManagement {
             long end = System.currentTimeMillis();
             long dif = end - start;
             Different = (int) (dif * (0.001));
-            if (Different/2==0){elixir.Change(true);}
+            if (Different/2==0){elixirPlayer1.Change(true);}
             if(Different == 120){
-                if (Different/2==0){elixir.Change(false);}
+                if (Different/2==0){elixirPlayer2.Change(false);}
 
             }
         }

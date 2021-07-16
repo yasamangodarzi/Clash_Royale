@@ -31,7 +31,6 @@ public class PrincessTower extends Tower{
 //        return LevelGameHP.get(GameLevel);
 //    }
 
-    @Override
     public void doAction() {
         int i=0;
         if (OpponentCard.size()>0)

@@ -1,5 +1,7 @@
 package Game;
 
+import java.util.ArrayList;
+
 public class CommonGameData {
     //filed
     protected int Range;
@@ -7,6 +9,7 @@ public class CommonGameData {
     protected int HP;
     protected ArrayList<Card> OpponentCard=new ArrayList<>();
     protected double HitSpeed;
+    protected boolean alive=false;
     protected Target target;
     //If we are at the beginning of the game, its true, otherwise it is false, elixir = 4
     public boolean mode = true;
