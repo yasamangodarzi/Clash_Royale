@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class File {
     private String Level;
     private ArrayList<String> HandsOfCards;
-    private boolean ResultGame;
+    public boolean ResultGame;
 
     public File(String Level, boolean ResultGame, ArrayList<String>HandsOfCards){
         this.Level = Level;
@@ -31,5 +31,26 @@ public class File {
        //  InformationPlayer information = new InformationPlayer(theEndResultOfGame, HandsOfCards, jalaliCalendar.toString());
         file.creatDirectory("F:/ClashRoyal");
         //file.writeObject("F:/ClashRoyal/" + Level + ".txt", information);
+    }
+
+    /**
+     * This method has the ability to return a list of directories in a specific address
+     * @param name name file
+     * @return
+     */
+    public ArrayList<String> listDirectory(String name) {
+        java.io.File file = null;
+        String[] paths;
+        ArrayList<String> ArrayPath = new ArrayList<>();
+        try {
+            file = new java.io.File(name);
+            paths = file.list();
+            for (String path : paths) {
+                ArrayPath.add(path);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return ArrayPath;
     }
 }
