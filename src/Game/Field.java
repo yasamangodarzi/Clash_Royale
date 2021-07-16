@@ -34,4 +34,8 @@ public class Field {
     public int[][] getArea() {
         return area;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
