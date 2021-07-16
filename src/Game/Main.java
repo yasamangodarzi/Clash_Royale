@@ -17,10 +17,10 @@ public class Main {
 
          gameManagement.setGameManagement(player,player2);
 ////        System.out.println(player.existCard.size());
-        for (Card c: gameManagement.getPlayer1().existCard
-             ) {
-            System.out.println(c.toString());
-        }
+//        for (Card c: gameManagement.getPlayer1().existCard
+//             ) {
+//            System.out.println(c.toString());
+//        }
 //
 //System.out.println(gameHandler.getPlayer().existCard.size());
 //gameHandler.addCard("Giant");

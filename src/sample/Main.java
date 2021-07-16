@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Main extends Application {
     public static ArrayList<Player> players=new ArrayList<>();
-    public static Player playercurent=new Player("yasaa");
+    public static Player playercurent=new Player("yas");
     public static PlayerInformation playerInformation=new PlayerInformation();
    public static GameHandler gameHandler=new GameHandler();
     static AnchorPane root;
