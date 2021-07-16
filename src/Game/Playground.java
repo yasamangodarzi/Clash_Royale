@@ -45,7 +45,7 @@ public class Playground extends CommonGameData{
                             break;
                     }
                 }
-                if (distanceRes == Range){
+                if (distanceRes <= Range){
                     Space.add((int) distanceRes);
                     GoalsDistanceCard.computeIfAbsent((int) distanceRes, k -> new ArrayList<>()).add(CardName);
                     Collections.sort(Space);
