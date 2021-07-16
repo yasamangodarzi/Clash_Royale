@@ -1,15 +1,14 @@
 package Game;
 
-public class Location extends Playground{
+public class Location {
 
     //filed
     private static int row;
     private static int column;
 
     //constructor
-    public Location(int row, int column){
-        Location.row = row;
-        Location.column = column;
+    public Location( ){
+
     }
 
     //method
@@ -21,11 +20,11 @@ public class Location extends Playground{
         return column;
     }
 
-    public static void setRow(int row) {
+    public   void setRow(int row) {
         Location.row = row;
     }
 
-    public static void setColumn(int column) {
+    public  void setColumn(int column) {
         Location.column = column;
     }
 
