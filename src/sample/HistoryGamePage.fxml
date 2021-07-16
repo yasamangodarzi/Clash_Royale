@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="800.0" prefWidth="500.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="500.0" layoutY="2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Barbarian%20Sword%20Clash%20Royale%20Wallpaper%20-%20Clash%20Royale%20Kingdom2.jpeg.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level1" fitHeight="55.0" fitWidth="120.0" layoutX="70.0" layoutY="107.0" onMousePressed="#Level1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level2" fitHeight="55.0" fitWidth="124.0" layoutX="106.0" layoutY="176.0" onMousePressed="#Level2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level3" fitHeight="55.0" fitWidth="122.0" layoutX="135.0" layoutY="249.0" onMousePressed="#Level3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level4" fitHeight="55.0" fitWidth="135.0" layoutX="164.0" layoutY="329.0" onMousePressed="#Level4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="level5" fitHeight="55.0" fitWidth="131.0" layoutX="270.0" layoutY="509.0" onMousePressed="#Level5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@5.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Backimage" fitHeight="60.0" fitWidth="60.0" layoutX="436.0" layoutY="731.0" onMousePressed="#Back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@iconaghab-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="yesOrNo1" fitHeight="43.0" fitWidth="41.0" layoutX="186.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="yesOrNo2" fitHeight="43.0" fitWidth="41.0" layoutX="222.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="yesOrNo3" fitHeight="43.0" fitWidth="41.0" layoutX="245.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="yesOrNo4" fitHeight="43.0" fitWidth="41.0" layoutX="280.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="yesOrNo5" fitHeight="43.0" fitWidth="41.0" layoutX="386.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Explanation1" fitHeight="67.0" fitWidth="214.0" layoutX="263.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Explanation2" fitHeight="67.0" fitWidth="214.0" layoutX="270.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Explanation3" fitHeight="67.0" fitWidth="201.0" layoutX="289.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Explanation4" fitHeight="67.0" fitWidth="214.0" layoutX="279.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Explanation5" fitHeight="67.0" fitWidth="207.0" layoutX="286.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
