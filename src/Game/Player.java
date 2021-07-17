@@ -8,6 +8,7 @@ public class Player {
     private ArrayList<Card> card=new ArrayList();
     public ArrayList<Card> existCard=new ArrayList();
     public ArrayList<Tower> towers=new ArrayList();
+    public File file;
 
     private int xp=0;
 

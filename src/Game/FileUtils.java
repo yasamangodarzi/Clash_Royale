@@ -52,26 +52,26 @@ public class FileUtils {
     }
 
 
-    /**
-     * This method has the ability to return a list of directories in a specific address
-     * @param name name file
-     * @return
-     */
-    public ArrayList<String> listDirectory(String name) {
-        java.io.File file = null;
-        String[] paths;
-        ArrayList<String> ArrayPath = new ArrayList<>();
-        try {
-            file = new java.io.File(name);
-            paths = file.list();
-            for (String path : paths) {
-                ArrayPath.add(path);
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return ArrayPath;
-    }
+//    /**
+//     * This method has the ability to return a list of directories in a specific address
+//     * @param name name file
+//     * @return
+//     */
+//    public ArrayList<String> listDirectory(String name) {
+//        java.io.File file = null;
+//        String[] paths;
+//        ArrayList<String> ArrayPath = new ArrayList<>();
+//        try {
+//            file = new java.io.File(name);
+//            paths = file.list();
+//            for (String path : paths) {
+//                ArrayPath.add(path);
+//            }
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+//        return ArrayPath;
+//    }
 
 
     /**
