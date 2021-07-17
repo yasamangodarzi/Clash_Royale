@@ -74,7 +74,7 @@ public class ControllerBattleHistory {
 
     }
 
-    void commonMethodBattleHistory(int level, ImageView Explanation, ImageView yesOrNo){
+    public void commonMethodBattleHistory(int level, ImageView Explanation, ImageView yesOrNo){
         ArrayList<String> DirectoryList = Main.gameHandler.player.file.listDirectory("F:/ClashRoyal");
         if(DirectoryList.size() == level){
             try {
