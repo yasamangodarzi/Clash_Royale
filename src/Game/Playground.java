@@ -18,8 +18,8 @@ public class Playground extends CommonGameData{
     }
 
     public List<Card> DetectProximityTargetCard(int DestinationRow, int DestinationColumn,
-                                                int Range, ArrayList<Playground>ArrayCardOrigin,
-                                                Card CardName, String Condition) {
+                                                double Range, ArrayList<Playground>ArrayCardOrigin,
+                                                Card CardName) {
 
         int RowOrigin, ColumnOrigin;
         List<Card> goal = new ArrayList<>();
@@ -31,7 +31,7 @@ public class Playground extends CommonGameData{
                 double ResultRowDifference = Math.pow((DestinationRow - RowOrigin), 2);
                 double ResultColumnDifference = Math.pow((DestinationColumn - ColumnOrigin), 2);
                 double distance = Math.sqrt(((int) ResultRowDifference + (int) ResultColumnDifference));
-                if(Condition.equals("Card")) {
+                
                     Speed speed = ((Soldier) CardName).getSpeed();
                     switch (speed) {
                         case FAST:
@@ -44,7 +44,7 @@ public class Playground extends CommonGameData{
                             distanceRes = distance * 2;
                             break;
                     }
-                }
+               
                 if (distanceRes <= Range){
                     Space.add((int) distanceRes);
                     GoalsDistanceCard.computeIfAbsent((int) distanceRes, k -> new ArrayList<>()).add(CardName);
