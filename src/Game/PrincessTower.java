@@ -1,6 +1,7 @@
 package Game;
 
 public class PrincessTower extends Tower{
+    int j=0;
     public PrincessTower() {
         HitSpeed=0.8;
         Range=7.5;
@@ -33,20 +34,36 @@ public class PrincessTower extends Tower{
 //        return LevelGameHP.get(GameLevel);
 //    }
 @Override
-    public void doAction() {
-        int i=0;
-        if (OpponentCard.size()>0)
-        {
-            if (OpponentCard.get(i).alive)
-            {
-                System.out.println(OpponentCard.get(i).toString());
-                System.out.println("before"+OpponentCard.get(i).HP);
-                shoot(OpponentCard.get(i));
-                System.out.println("after"+OpponentCard.get(i).HP);
+    public void doAction(long milsecond) {
+//    System.out.println(milsecond);
+//       long timefirst=0;
+//        if (j==0)
+//        {
+//            System.out.println(milsecond);
+//            timefirst=milsecond;
+//            System.out.println(timefirst);
+//        }else
+       // {
+//           if (milsecond-timefirst==700)
+//           {
+               int i=0;
+               if (OpponentCard.size()>0 && OpponentCard.get(i).HP>0) {
+                   if (OpponentCard.get(i).alive) {
+                       System.out.println(OpponentCard.get(i).toString());
+                       System.out.println("before" + OpponentCard.get(i).HP);
+                       shoot(OpponentCard.get(i));
+                       System.out.println("after" + OpponentCard.get(i).HP);
 
-            }else {i++;}
+                   } else {
+                       i++;
+                   }
+               //}
+           //}
+
         }
-    }
+       j++;
+        }
+
     public void shoot(Card card)
     {
         card.HP-=this.Damage;

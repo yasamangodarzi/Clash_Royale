@@ -44,7 +44,7 @@ public class KingTower extends Tower{
 //        return LevelGameHP.get(GameLevel);
 //    }
     @Override
-    public void doAction() {
+    public void doAction(long milisecond) {
         CheckCanShoot();
         int i=0;
         if (CanShoot)
@@ -71,8 +71,12 @@ public class KingTower extends Tower{
         CanShoot = canShoot;
     }
     public void CheckCanShoot() {
+        System.out.println(level);
           if(HP<Hplevel.get(level)){
+
               CanShoot=true;
+
           }
+        System.out.println(CanShoot);
     }
 }

@@ -64,4 +64,5 @@ public class Playground extends CommonGameData{
         }
         return goal;
     }
+    public void doAction(long milisecond) {}
 }

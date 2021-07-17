@@ -13,9 +13,9 @@ public class GameManagement {
     public Field field=new Field();
     public ArrayList<Card> InGameCards=new ArrayList<>();
     public ArrayList<Card> CardPlayer1=new ArrayList<>();
-    public ArrayList<CommonGameData>  Player1=new ArrayList<>();
+    public ArrayList<Playground>  Player1=new ArrayList<>();
     public ArrayList<Card> CardPlayer2=new ArrayList<>();
-    public ArrayList<CommonGameData>  Player2=new ArrayList<>();
+    public ArrayList<Playground>  Player2=new ArrayList<>();
 
 
     public void setGameManagement(Player player1,Player player2) {
@@ -35,27 +35,26 @@ public class GameManagement {
 
     public void StartGame(Player player1,Player player2){
         setGameManagement(player1, player2);
-System.out.println("set");
-int i=0;
+        System.out.println("set");
+
         long startTime = System.nanoTime();
         int Different = 0;
         long timeElapsed = 0;
         while(timeElapsed != 180000){
-            for (CommonGameData c:Player1) {
-                if (i==5){Player1.get(2).HP=0;}
-                if (c.HP>0){ c.doAction();}
+            //The first 2 minutes of the game
+            for (Playground c:Player1) {
+                if (c.HP>0){ c.doAction(timeElapsed);}
                else{c.alive=false;}
                 //ask
               // c.OpponentCard=c.D
             }
-            for (CommonGameData c:Player2) {
-                if (i==5){Player2.get(2).HP=0;}
-                if (c.HP>0){ c.doAction();}
+            for (Playground c:Player2) {
+                if (c.HP>0){ c.doAction(timeElapsed);}
                 else{c.alive=false;}
             }
-            //The first 2 minutes of the game
 
-        i++;
+
+
 
             long endTime = System.nanoTime();
             timeElapsed = (endTime - startTime) / 1000000;
@@ -83,7 +82,7 @@ int i=0;
     public Player getPlayer2() {
         return player2;
     }
-    public void addCard(Card card, int a)
+    public void addCard(Card card, int a,int row,int clo)
     {
         ArrayList<Card>cards=new ArrayList<>();
         cards.add(card);
@@ -92,12 +91,16 @@ int i=0;
              level.SetCard(cards, player1.getLevel());
             elixirPlayer1.lowerElixir(card.cost);
             card.alive=true;
+           card.getLocation().setRow(row);
+           card.getLocation().setColumn(clo);
             CardPlayer1.add(card);
             Player1.add(card);
         }else if (a==2){
             level.SetCard(cards, player2.getLevel());
             elixirPlayer2.lowerElixir(card.cost);
             card.alive=true;
+            card.getLocation().setRow(row);
+            card.getLocation().setColumn(clo);
             CardPlayer2.add(card);
             Player2.add(card);
         }

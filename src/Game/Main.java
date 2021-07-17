@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
 //        GameHandler gameHandler=new GameHandler();
         Player player=new Player("yas");
-        player.setXp(5000);
+        player.setXp(300);
         System.out.println(player.level());
-       KingTower kingTower= (KingTower) player.towers.get(0);
-       kingTower.CheckCanShoot();
+     //  KingTower kingTower= (KingTower) player.towers.get(0);
+      // kingTower.CheckCanShoot();
         Player player2=new Player("mary");
         //PrincessTower princessTower=new PrincessTower();
 
@@ -25,9 +25,9 @@ public class Main {
             System.out.println(c.toString());
         }
         System.out.println( "-----------------");
-         gameManagement.setGameManagement(player,player2);
+         //gameManagement.setGameManagement(player,player2);
 
-        gameManagement.addCard(player.existCard.get(3),1);
+       // gameManagement.addCard(player.existCard.get(3),1,13,2);
 ////        System.out.println(player.existCard.size());
         for (Card c: gameManagement.CardPlayer1
              ) {
@@ -37,8 +37,10 @@ public class Main {
         ) {
             System.out.println(c.toString());
         }
-        System.out.println(gameManagement.Player1.get(2).OpponentCard);
-       //  gameManagement.StartGame(player,player2);
+//        System.out.println(gameManagement.Player1.get(2).OpponentCard);
+//
+//        System.out.println(gameManagement.Player1.get(2).OpponentCard);
+         gameManagement.StartGame(player,player2);
 //
 //System.out.println(gameHandler.getPlayer().existCard.size());
 //gameHandler.addCard("Giant");

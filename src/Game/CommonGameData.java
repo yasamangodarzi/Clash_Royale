@@ -47,6 +47,6 @@ public class CommonGameData {
     public void setHP(int HP) {
             this.HP = HP;
         }
-    public void doAction() {}
+
 
 }
