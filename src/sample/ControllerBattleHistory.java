@@ -67,6 +67,8 @@ public class ControllerBattleHistory {
     @FXML
     private ImageView Explanation5;
 
+
+
     @FXML
     void Back(MouseEvent event) {
 
@@ -119,54 +121,9 @@ public class ControllerBattleHistory {
         }
     }
 
-
     @FXML
     void Level1(MouseEvent event) {
         commonMethodBattleHistory(1, Explanation1, yesOrNo1);
-//        ArrayList<String> DirectoryList = Main.gameHandler.player.file.listDirectory("F:/ClashRoyal");
-//        if(DirectoryList.size() == 1){
-//            try {
-//                stream = new FileInputStream(imageYesIcon);
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            Image imageYes = new Image(stream);
-//            yesOrNo1.setImage(imageYes);
-//            if(Main.gameHandler.player.file.ResultGame){
-//                try {
-//                    stream = new FileInputStream(imageInformationWinner);
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                }
-//                Image imageWinner = new Image(stream);
-//                Explanation1.setImage(imageWinner);
-//            }
-//            else{
-//                try {
-//                    stream = new FileInputStream(imageInformationLoser);
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                }
-//                Image imageLoser = new Image(stream);
-//                Explanation1.setImage(imageLoser);
-//            }
-//        }
-//        else{
-//            try {
-//                stream = new FileInputStream(imageNoIcon);
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            Image imageNo = new Image(stream);
-//            Explanation1.setImage(imageNo);
-//            try {
-//                stream = new FileInputStream(imageInformationNo);
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            Image imageInformationNot = new Image(imageInformationNo);
-//            Explanation1.setImage(imageInformationNot);
-//        }
     }
 
     @FXML
