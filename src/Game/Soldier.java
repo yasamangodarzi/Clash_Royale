@@ -1,7 +1,7 @@
 package Game;
 
 public class Soldier extends Card{
-    protected Speed speed ;
+//    protected Speed speed ;
    protected int Count;
 
 
@@ -13,7 +13,7 @@ public class Soldier extends Card{
 
     }
 
-    public Speed getSpeed() {
-        return speed;
-    }
+//    public Speed getSpeed() {
+//        return speed;
+//    }
 }

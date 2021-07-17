@@ -5,8 +5,8 @@ import java.util.*;
 public class Playground extends CommonGameData{
  protected Location location=new Location();
     List<Integer> Space = new ArrayList<>();
-    Map<Integer, List<Card>> GoalsDistanceCard = new HashMap<>();
-
+    Map<Integer, List<Playground>> GoalsDistanceCard = new HashMap<>();
+ protected Speed speed;
 
     public Playground() {
         HashMap<Integer, Integer>LevelGameHP = new HashMap<>();
@@ -17,12 +17,12 @@ public class Playground extends CommonGameData{
         return location;
     }
 
-    public List<Card> DetectProximityTargetCard(int DestinationRow, int DestinationColumn,
-                                                int Range, ArrayList<Playground>ArrayCardOrigin,
-                                                Card CardName) {
+    public List<Playground> DetectProximityTargetCard(int DestinationRow, int DestinationColumn,
+                                                 ArrayList<Playground>ArrayCardOrigin,
+                                                double Range) {
 
         int RowOrigin, ColumnOrigin;
-        List<Card> goal = new ArrayList<>();
+        List<Playground> goal = new ArrayList<>();
         for(Playground cardOrigin: ArrayCardOrigin){
             if(cardOrigin.alive){
                 RowOrigin = cardOrigin.location.getRow();
@@ -31,7 +31,7 @@ public class Playground extends CommonGameData{
                 double ResultRowDifference = Math.pow((DestinationRow - RowOrigin), 2);
                 double ResultColumnDifference = Math.pow((DestinationColumn - ColumnOrigin), 2);
                 double distance = Math.sqrt(((int) ResultRowDifference + (int) ResultColumnDifference));
-                    Speed speed = ((Soldier) CardName).getSpeed();
+                Speed speed = cardOrigin.speed;
                     switch (speed) {
                         case FAST:
                             distanceRes = distance / 2;
@@ -45,7 +45,7 @@ public class Playground extends CommonGameData{
                     }
                 if (distanceRes <= Range){
                     Space.add((int) distanceRes);
-                    GoalsDistanceCard.computeIfAbsent((int) distanceRes, k -> new ArrayList<>()).add(CardName);
+                    GoalsDistanceCard.computeIfAbsent((int) distanceRes, k -> new ArrayList<>()).add(cardOrigin);
                     Collections.sort(Space);
                     ArrayList<Integer> SpaceSort = new ArrayList<>();
                     for (int temp : Space) {
@@ -62,4 +62,5 @@ public class Playground extends CommonGameData{
         }
         return goal;
     }
+    public void doAction(long milisecond) {}
 }

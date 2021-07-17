@@ -7,4 +7,7 @@ public class Building extends Card{
         this.lifeTime = lifeTime;
     }
 
+    public Building(){
+        speed = Speed.MEDIUM;
+    }
 }

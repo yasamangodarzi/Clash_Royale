@@ -1,6 +1,6 @@
 package Game;
 
-public class Card extends CommonGameData{
+public class Card extends Playground{
     protected String CardName;
    protected int cost;
 
