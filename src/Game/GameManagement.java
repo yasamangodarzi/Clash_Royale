@@ -45,8 +45,15 @@ public class GameManagement {
             for (Playground c:Player1) {
                 if (c.HP>0){ c.doAction(timeElapsed);}
                else{c.alive=false;}
-                //ask
-              // c.OpponentCard=c.D
+               if (c instanceof Card)
+               {
+                   c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),c.Range,Player2,"Card");
+               }
+               if (c instanceof Tower)
+               {
+                   c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),c.Range,Player2,"Tower");
+               }
+
             }
             for (Playground c:Player2) {
                 if (c.HP>0){ c.doAction(timeElapsed);}
