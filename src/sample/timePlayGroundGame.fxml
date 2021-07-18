@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="387.0" prefWidth="401.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="389.0" prefWidth="403.0">
+         <children>
+            <Pane prefHeight="387.0" prefWidth="401.0">
+               <children>
+                  <Label fx:id="time" layoutX="66.0" layoutY="253.0" prefHeight="64.0" prefWidth="141.0" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font name="DecoType Naskh Variants" size="18.0" />
+                     </font></Label>
+                  <Button fx:id="button" layoutX="294.0" layoutY="272.0" mnemonicParsing="false" onMousePressed="#Button" prefHeight="25.0" prefWidth="73.0" text="Button" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
