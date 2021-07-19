@@ -1,13 +1,14 @@
 package Game;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CommonGameData {
     //filed
     protected double Range;
     protected int Damage;
     protected int HP;
-    protected ArrayList<Card> OpponentCard=new ArrayList<>();
+    protected  ArrayList<Playground> OpponentCard=new ArrayList<>();
     protected double HitSpeed;
     protected boolean alive=false;
     protected Target target;

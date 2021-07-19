@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class InformationPlayer implements Serializable {
     private String ResultGame;
-    private ArrayList<String> HandsOfCards;
+    private ArrayList<Card> HandsOfCards;
     private String data;
 
-    public InformationPlayer(String ResultGame, ArrayList<String>HandsOfCards, String data){
+    public InformationPlayer(String ResultGame, ArrayList<Card>HandsOfCards, String data){
         this.ResultGame = ResultGame;
         this.data = data;
 //        ArrayList<String>HandsOfCards = new ArrayList<>();
@@ -24,11 +24,11 @@ public class InformationPlayer implements Serializable {
         ResultGame = resultGame;
     }
 
-    public ArrayList<String> getHandsOfCards() {
+    public ArrayList<Card> getHandsOfCards() {
         return HandsOfCards;
     }
 
-    public void setHandsOfCards(ArrayList<String> handsOfCards) {
+    public void setHandsOfCards(ArrayList<Card> handsOfCards) {
         HandsOfCards = handsOfCards;
     }
 

@@ -5,7 +5,7 @@ import java.util.*;
 public class Playground extends CommonGameData{
  protected Location location=new Location();
     List<Integer> Space = new ArrayList<>();
-    Map<Integer, List<Playground>> GoalsDistanceCard = new HashMap<>();
+    Map<Integer, ArrayList<Playground>> GoalsDistanceCard = new HashMap<>();
  protected Speed speed;
 
     public Playground() {
@@ -17,12 +17,12 @@ public class Playground extends CommonGameData{
         return location;
     }
 
-    public List<Playground> DetectProximityTargetCard(int DestinationRow, int DestinationColumn,
+    public ArrayList<Playground> DetectProximityTargetCard(int DestinationRow, int DestinationColumn,
                                                  ArrayList<Playground>ArrayCardOrigin,
                                                 double Range) {
 
         int RowOrigin, ColumnOrigin;
-        List<Playground> goal = new ArrayList<>();
+        ArrayList<Playground> goal = new ArrayList<>();
         for(Playground cardOrigin: ArrayCardOrigin){
             if(cardOrigin.alive){
                 RowOrigin = cardOrigin.location.getRow();
