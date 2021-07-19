@@ -237,5 +237,5 @@ public class GameManagement {
     {
         return elixirPlayer2.getElixir();
     }
-
+mm
 }
