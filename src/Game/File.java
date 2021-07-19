@@ -6,10 +6,10 @@ import java.util.Date;
 
 public class File {
     private String Level;
-    private ArrayList<String> HandsOfCards;
+    private ArrayList<Card> HandsOfCards;
     public boolean ResultGame;
 
-    public File(String Level, boolean ResultGame, ArrayList<String>HandsOfCards){
+    public File(String Level, boolean ResultGame, ArrayList<Card>HandsOfCards){
         this.Level = Level;
         this.HandsOfCards = HandsOfCards;
         this.ResultGame = ResultGame;

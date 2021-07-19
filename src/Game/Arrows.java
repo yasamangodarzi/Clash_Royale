@@ -6,4 +6,5 @@ public class Arrows extends Spell{
         Radius=4;
         cost=3;
     }
+
 }

@@ -7,4 +7,8 @@ public class Spell extends Card{
     public Spell(){
         speed = Speed.MEDIUM;
     }
+    public void findArea()
+    {
+
+    }
 }

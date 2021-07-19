@@ -1,5 +1,6 @@
 package Game;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -16,6 +17,13 @@ public class GameManagement {
     public ArrayList<Playground>  Player1=new ArrayList<>();
     public ArrayList<Card> CardPlayer2=new ArrayList<>();
     public ArrayList<Playground>  Player2=new ArrayList<>();
+    public String loser = "";
+    public String win = "";
+    private boolean King1Alive=true;
+   private boolean King2Alive=true;
+   private  int hpPlayer1=0;
+   private  int hpPlayer2=0;
+   private boolean first=true;
 
 
     public void setGameManagement(Player player1,Player player2) {
@@ -40,48 +48,114 @@ public class GameManagement {
         long startTime = System.nanoTime();
         int Different = 0;
         long timeElapsed = 0;
-        while(timeElapsed != 180000){
-            //The first 2 minutes of the game
-            for (Playground c:Player1) {
-                if (c.HP>0){ c.doAction(timeElapsed);}
-               else{c.alive=false;}
-               if (c instanceof Card)
-               {
-                   //c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),Player2,c.Range);
-               }
-               if (c instanceof Tower)
-               {
-                 //  c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),Player2,c.Range);
-               }
-
-            }
-            for (Playground c:Player2) {
-                if (c.HP>0){ c.doAction(timeElapsed);}
-                else{c.alive=false;}
-            }
-
-
-
-
-            long endTime = System.nanoTime();
-            timeElapsed = (endTime - startTime) / 1000000;
-            Different = (int)timeElapsed / 1000;
-            if(Different/2==0)
+        while(timeElapsed != 180000 ){
+            if (CheckEndGame())
             {
-                elixirPlayer1.Change(true);
-                elixirPlayer2.Change(true);
-            }
-            if(timeElapsed == 120000){
-                if (Different/2==0)
+                //The first 2 minutes of the game
+                for (Playground c:Player1) {
+                    if (c.HP>0)
+                    {
+                        c.doAction(timeElapsed);
+                        c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                                Player2,c.Range);
+                    }
+                    else
+                    {
+                        c.alive=false;
+                    }
+
+
+                }
+                for (Playground c:Player2) {
+                    if (c.HP>0)
+                    {
+                        c.doAction(timeElapsed);
+                        c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                                Player1,c.Range);
+                    }
+                    else{
+                        c.alive=false;
+                    }
+                }
+                long endTime = System.nanoTime();
+                timeElapsed = (endTime - startTime) / 1000000;
+                Different = (int)timeElapsed / 100000000;
+
+                if(Different/2==0 && first)
                 {
-                    elixirPlayer1.Change(false);
-                    elixirPlayer2.Change(false);
+
+                    elixirPlayer1.Change(true);
+                    elixirPlayer2.Change(true);
+                    first=false;
+                }
+                if(timeElapsed == 120000){
+                    if (Different/2==0)
+                    {
+                        elixirPlayer1.Change(false);
+                        elixirPlayer2.Change(false);
+                    }
+
                 }
 
             }
+            else
+            {
+                if (King1Alive)
+                {
+                   loser= player2.getUsername();
+                   win= player1.getUsername();
+
+                }
+                else
+                {
+                   loser= player1.getUsername();
+                   win= player2.getUsername();
+                }
+
+                 break;
+            }
+
         }
-        //System.out.println("Check out the game");
-        //file
+        if (win.equals("") && loser.equals(""))
+        {
+            for (Playground p:Player1) {
+                if (p.alive && p instanceof Tower && p.HP>0){hpPlayer1+=p.HP;}
+            }
+            for (Playground p:Player2) {
+                if (p.alive && p instanceof Tower && p.HP>0){hpPlayer2+=p.HP;}
+            }
+            if (hpPlayer1>hpPlayer2)
+            {
+                loser= player2.getUsername();
+                win= player1.getUsername();
+            }else
+            {
+                loser= player1.getUsername();
+                win= player2.getUsername();
+            }
+
+        }
+        boolean resultGame;
+        if (win.equalsIgnoreCase(player1.getUsername()))
+        {
+          resultGame=true;
+        }else {resultGame=false;}
+        File file=new File(String.valueOf(player1.level()),resultGame,player1.existCard);
+        try {
+            file.CreatFilePlayer();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        if (!(player2 instanceof robot))
+        {
+            File file2=new File(String.valueOf(player2.level()),!resultGame,player2.existCard);
+            try {
+                file2.CreatFilePlayer();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
     public Player getPlayer1() {
         return player1;
@@ -115,6 +189,53 @@ public class GameManagement {
 
         InGameCards.add(card);
 
+    }
+    public boolean CheckEndGame()
+    {
+
+        for (Playground p:Player1) {
+            if (p instanceof KingTower)
+            {
+                if (!(p.alive)){
+                    King1Alive=false;
+                    return false;
+
+                }
+            }
+        }
+        for (Playground p:Player2) {
+            if (p instanceof KingTower)
+            {
+                if (!(p.alive)){
+                    King2Alive=false;
+                    return false;
+
+                }
+            }
+        }
+        if (King1Alive && King2Alive)
+        {
+            return true;
+        }
+        return true;
+    }
+    public ArrayList<Card> getPlayer1CardList()
+    {
+
+        return player1.existCard;
+    }
+    public ArrayList<Card> getPlayer2CardList()
+    {
+
+        return player1.existCard;
+    }
+    public int getExlixirPlayer1()
+    {
+        return elixirPlayer1.getElixir();
+    }
+    public int getExlixirplayer2()
+    {
+        return elixirPlayer2.getElixir();
     }
 
 }
