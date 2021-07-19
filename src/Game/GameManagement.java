@@ -47,11 +47,11 @@ public class GameManagement {
                else{c.alive=false;}
                if (c instanceof Card)
                {
-                   c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),Player2,c.Range);
+                   //c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),Player2,c.Range);
                }
                if (c instanceof Tower)
                {
-                   c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),Player2,c.Range);
+                 //  c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),Player2,c.Range);
                }
 
             }
@@ -81,6 +81,7 @@ public class GameManagement {
             }
         }
         //System.out.println("Check out the game");
+        //file
     }
     public Player getPlayer1() {
         return player1;

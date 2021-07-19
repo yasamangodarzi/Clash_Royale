@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Contoroller">
    <children>
       <Pane layoutX="-1.0" layoutY="44.0" prefHeight="752.0" prefWidth="492.0">
          <children>
@@ -24,12 +24,12 @@
                   <Image url="@no(exit).png" />
                </image>
             </ImageView>
-            <ImageView fx:id="rearIcon" fitHeight="60.0" fitWidth="60.0" layoutX="437.0" layoutY="625.0" onMousePressed="#RearIcon" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="rearIcon" fitHeight="60.0" fitWidth="60.0" layoutX="437.0" layoutY="625.0" onMousePressed="#RearIconP" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@iconaghab-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="frontIcon" fitHeight="60.0" fitWidth="60.0" layoutX="438.0" layoutY="689.0" onMousePressed="#FrontIcon" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="frontIcon" fitHeight="60.0" fitWidth="60.0" layoutX="438.0" layoutY="689.0" onMousePressed="#FrontIconP" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@iconjeloo.png" />
                </image>

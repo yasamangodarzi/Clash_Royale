@@ -281,7 +281,7 @@ enter=true;
 
     @FXML
     void question(MouseEvent event) {
-       Main.set(1);
+       Main.set(7);
     }
 
 

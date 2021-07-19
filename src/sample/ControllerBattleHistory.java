@@ -71,7 +71,7 @@ public class ControllerBattleHistory {
 
     @FXML
     void Back(MouseEvent event) {
-
+     Main.set(2);
     }
 
     public void commonMethodBattleHistory(int level, ImageView Explanation, ImageView yesOrNo){

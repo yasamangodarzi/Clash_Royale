@@ -36,7 +36,22 @@ public class Main extends Application {
             grid.add((Pane) FXMLLoader.load(getClass().getResource("TrainingCamp.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("Profile.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("OneVoneTwoVtwo.fxml")));
-            grid.add((Pane) FXMLLoader.load(getClass().getResource("BattleHistory.fxml")));
+            //
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("ValkyrieCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("RageCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("giantCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("FireballCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("Mini P.E.K.K.A.card.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("ArchersCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("ArrowsCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("BabyDragonCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource( "cardBarbarians.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("WizardCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("Inferno TowerCard.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("CannonCard.fxml")));
+            //
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("HistoryGamePage.fxml")));
+
             root.getChildren().add(grid.get(0));
             Scene scene=new Scene(root,500,800);
             primaryStage.setScene(scene);
@@ -90,17 +105,7 @@ public class Main extends Application {
     public static void setRobat(String robat) {
         Main.robat = robat;
     }
-    public static void ss()
-    {
-        playercurent.existCard.add(new Barbarians());
-        playercurent.existCard.add(new Valkyrie());
-        playercurent.existCard.add(new Archer());
-        playercurent.existCard.add(new InfernoTower());
-        playercurent.existCard.add(new Wizard());
-        playercurent.existCard.add(new Giant());
-        playercurent.existCard.add(new Cannon());
-        playercurent.existCard.add(new PEKKA());
-    }
+
 
     public static void main(String[] args) {
         launch(args);

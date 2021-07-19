@@ -37,7 +37,7 @@ public class ControllerMainPageClashRoyal {
      */
     @FXML
     void ButtleHistory(MouseEvent event) {
-        Main.set(7);
+        Main.set(19);
     }
 
 
@@ -67,6 +67,9 @@ public class ControllerMainPageClashRoyal {
     void TrainingCamp(MouseEvent event) {
         Main.set(4);
     }
-
+    @FXML
+    void Exist(MouseEvent event) {
+         Main.set(0);
+    }
 
 }
