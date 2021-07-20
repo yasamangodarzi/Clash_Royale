@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
-
 import java.time.LocalTime;
 import java.util.Date;
 
