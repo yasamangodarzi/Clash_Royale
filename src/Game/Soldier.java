@@ -70,7 +70,7 @@ public class Soldier extends Card{
                 // location.setRow(location.getRow()+1);
             }
             }
-        }, 0, 1000);
+        }, 0, 10000);
 //        if (milisecond-time==6000)
 //        {
 //            if (location.getColumn()<23)

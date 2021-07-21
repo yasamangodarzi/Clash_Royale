@@ -279,6 +279,81 @@ public class Level {
 
                 }
             }
+            if (c instanceof FireBall) {
+                switch (level) {
+                    case 1: {
+                         c.setDamage(325);
+                        break;
+                    }
+                    case 2: {
+                       c.setDamage(357);
+                        break;
+                    }
+                    case 3: {
+                       c.setDamage(393);
+                        break;
+                    }
+                    case 4: {
+                       c.setDamage(432);
+                        break;
+                    }
+                    case 5: {
+                        c.setDamage(474);
+                        break;
+                    }
+
+                }
+            }
+            if (c instanceof Arrows) {
+                switch (level) {
+                    case 1: {
+                         c.setDamage(144);
+                        break;
+                    }
+                    case 2: {
+                       c.setDamage(156);
+                        break;
+                    }
+                    case 3: {
+                       c.setDamage(174);
+                        break;
+                    }
+                    case 4: {
+                       c.setDamage(189);
+                        break;
+                    }
+                    case 5: {
+                        c.setDamage(210);
+                        break;
+                    }
+
+                }
+            }
+            if (c instanceof Rage) {
+                switch (level) {
+                    case 1: {
+                         ((Rage) c).setDuration(6000);
+                        break;
+                    }
+                    case 2: {
+                        ((Rage) c).setDuration(6500);
+                        break;
+                    }
+                    case 3: {
+                        ((Rage) c).setDuration(7000);
+                        break;
+                    }
+                    case 4: {
+                        ((Rage) c).setDuration(7500);
+                        break;
+                    }
+                    case 5: {
+                        ((Rage) c).setDuration(8000);
+                        break;
+                    }
+
+                }
+            }
 
         }
     }

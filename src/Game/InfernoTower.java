@@ -30,4 +30,24 @@ public class InfernoTower extends Building{
                 ", speed=" + speed +
                 '}';
     }
+    public void increseDamage(Playground playground)
+    {
+        if (CalculateRange(playground)<=6 && CalculateRange(playground)>5){Damage=Damage;}
+        if (CalculateRange(playground)<=5 && CalculateRange(playground)>4){Damage+=50;}
+        if (CalculateRange(playground)<=4 && CalculateRange(playground)>3){Damage+=100;}
+        if (CalculateRange(playground)<=3 && CalculateRange(playground)>2){Damage+=100;}
+        if (CalculateRange(playground)<=2 && CalculateRange(playground)>1){Damage+=50;}
+        if (CalculateRange(playground)<= 1){Damage=highDamage;}
+
+    }
+    public double CalculateRange(Playground playground)
+    {
+        int RowOrigin = playground.location.getRow();
+        int ColumnOrigin = playground.location.getColumn();
+        double distanceRes = 0;
+        double ResultRowDifference = Math.pow((this.getLocation().getRow() - RowOrigin), 2);
+        double ResultColumnDifference = Math.pow((this.getLocation().getColumn()- ColumnOrigin), 2);
+        double distance = Math.sqrt(((int) ResultRowDifference + (int) ResultColumnDifference));
+        return distance;
+    }
 }

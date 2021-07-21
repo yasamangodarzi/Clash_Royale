@@ -56,11 +56,24 @@ public class GameManagement {
                 CheckPrincessTowerDie();
                 //The first 2 minutes of the game
                 for (Playground c:Player1) {
-                    if (c.HP>0)
+                    if (c instanceof Spell)
+                    {
+                        if (c instanceof Rage)
+                        {
+                            ((Rage) c).doActionSpell(Player1);
+
+                        }
+                        else
+                        {
+                            ((Spell) c).doActionSpell(Player2);
+                        }
+                        c.alive=false;
+                    }
+                    else if (c.HP>0)
                     {
                         c.doAction(timeElapsed);
-                        //c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
-                             // Player2,c.Range);
+                        c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                               Player2,c.Range);
 
                     }
                     else
@@ -69,11 +82,23 @@ public class GameManagement {
                     }
                 }
                 for (Playground c:Player2) {
-                    if (c.HP>0)
+                    if (c instanceof Spell)
+                    {
+                        if (c instanceof Rage)
+                        {
+                            ((Rage) c).doActionSpell(Player2);
+                        }
+                        else
+                        {
+                            ((Spell) c).doActionSpell(Player1);
+                        }
+                        c.alive=false;
+                    }
+                    else if (c.HP>0)
                     {
                         c.doAction(timeElapsed);
-                       // c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
-                               // Player1,c.Range);
+                         c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                                 Player1,c.Range);
                     }
                     else{
                         c.alive=false;
@@ -148,15 +173,15 @@ public class GameManagement {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-//        if (!(player2 instanceof robot))
-//        {
-//            File file2=new File(String.valueOf(player2.level()),!resultGame,player2.existCard);
-//            try {
-//                file2.CreatFilePlayer();
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//        }
+        if (!(player2 instanceof robot))
+        {
+            File file2=new File(String.valueOf(player2.level()),!resultGame,player2.existCard);
+            try {
+                file2.CreatFilePlayer();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
     public Player getPlayer1() {
@@ -240,6 +265,7 @@ public class GameManagement {
                 });
                 thread.start();
             }
+
         }
 
 
@@ -326,5 +352,5 @@ public class GameManagement {
         }
 
     }
- 
+
 }

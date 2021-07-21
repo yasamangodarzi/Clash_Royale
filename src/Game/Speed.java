@@ -3,5 +3,6 @@ package Game;
 public enum Speed {
     SLOW,
     MEDIUM,
-    FAST
+    FAST,
+    VERYFAST
 }
