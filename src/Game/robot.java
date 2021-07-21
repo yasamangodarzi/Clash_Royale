@@ -1,6 +1,7 @@
 package Game;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 
 /**
@@ -9,6 +10,7 @@ import java.util.Random;
 public class robot extends Player{
 
     private ArrayList<Card> AllCard = new ArrayList<>();
+    protected HashSet<Card> cardYouCanPlay=new HashSet<>();
 
 
     /**

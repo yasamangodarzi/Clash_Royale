@@ -1,5 +1,7 @@
 package Game;
 
+import java.util.ArrayList;
+
 public class IntelligentRobot extends robot{
 
     //filed
@@ -16,7 +18,7 @@ public class IntelligentRobot extends robot{
     }
 
 
-   public Card intelligentRobot(rival ,){
-
+   public Card intelligentRobot(){
+       Card[] Geeks = cardYouCanPlay.toArray(new Card[cardYouCanPlay.size()]);
    }
 }
