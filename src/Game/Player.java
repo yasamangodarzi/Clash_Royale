@@ -14,11 +14,18 @@ public class Player {
     public Player (String username) {
         level=level();
          this.username=username;
-         PrincessTower princessTower=new PrincessTower();
+//         PrincessTower princessTower=new PrincessTower();
          Barbarians barbarians=new Barbarians();
-         barbarians.alive=true;
-         barbarians.HP=100;
-         princessTower.OpponentCard.add(barbarians);
+         Archer archer=new Archer();
+         archer.HP=100;
+         barbarians.OpponentCard.add(archer);
+ //         Valkyrie valkyrie=new Valkyrie();
+//         barbarians.alive=true;
+//         valkyrie.alive=true;
+//         barbarians.HP=100;
+//         valkyrie.HP=100;
+//         princessTower.OpponentCard.add(barbarians);
+//         princessTower.OpponentCard.add(valkyrie);
           existCard.add(new Barbarians());
           existCard.add(new Archer());
           existCard.add(new BabyDragon());
@@ -29,7 +36,8 @@ public class Player {
           existCard.add(new InfernoTower());
           towers.add(new KingTower(level()));
           towers.add(new PrincessTower());
-          towers.add(princessTower);
+          towers.add(new PrincessTower());
+         // towers.add(princessTower);
 
     }
 

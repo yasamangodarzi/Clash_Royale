@@ -63,4 +63,52 @@ public class Playground extends CommonGameData{
         return goal;
     }
     public void doAction(long milisecond) {}
+    public boolean CheckTarget(Playground playground)
+    {
+        Target target1=target;
+        System.out.println("Target"+target1);
+        Target target2=playground.target;
+        System.out.println("Target rival"+target2);
+
+        if (playground instanceof Tower )
+        {
+
+            return true;
+        }
+        else if (playground instanceof Soldier || playground instanceof Building)
+        {
+
+
+            if (target1.equals(Target.AIR_GROUND)){return true;}
+            if (target1.equals(Target.GROUND))
+            {
+                if (target2.equals(Target.GROUND)){return true;}
+                if (target2.equals(Target.AIR_GROUND)){return false;}
+
+            }
+            if (target1.equals(Target.AIR))
+            {
+                if (target2.equals(Target.GROUND)){return false;}
+                if (target2.equals(Target.AIR_GROUND)){return true;}
+
+            }
+            if (target1.equals(Target.BUILDING))
+            {
+
+                if ((playground instanceof Building))
+                {
+
+                    return true;
+                }else
+                {
+
+                    return false;
+                }
+            }
+
+
+        }
+        return  true;
+    }
+
 }

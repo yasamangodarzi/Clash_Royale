@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class KingTower extends Tower{
      private HashMap<Integer,Integer> Hplevel=new HashMap<>();
      private int level;
+    private long timefirst=0;
     private boolean CanShoot=false;
     public KingTower(int level) {
         Hplevel.put(1,2400);
@@ -14,56 +15,33 @@ public class KingTower extends Tower{
         Hplevel.put(5,3096);
           this.level=level;
          Range=7;
-        HitSpeed=1;
+        HitSpeed=1000;
     }
-    //    //method
-//    public void DamageSet(){
-//        LevelGameDamage.put(1, 50);
-//        LevelGameDamage.put(2, 53);
-//        LevelGameDamage.put(3, 57);
-//        LevelGameDamage.put(4, 60);
-//        LevelGameDamage.put(5, 64);
-//    }
-//    @Override
-//    public int DamageLevel(int GameLevel){
-//        DamageSet();
-//        return LevelGameDamage.get(GameLevel);
-//    }
-//
-//
-//    public void HPSet(){
-//        LevelGameHP.put(1, 2400);
-//        LevelGameHP.put(2, 2568);
-//        LevelGameHP.put(3, 2738);
-//        LevelGameHP.put(4, 2904);
-//        LevelGameHP.put(5, 3096);
-//    }
-//    @Override
-//    public int HpLevel(int GameLevel){
-//        HPSet();
-//        return LevelGameHP.get(GameLevel);
-//    }
     @Override
     public void doAction(long milisecond) {
         CheckCanShoot();
         int i=0;
         if (CanShoot)
         {
-            if (OpponentCard.size()>0)
+            if (milisecond-timefirst==HitSpeed)
             {
-                if (OpponentCard.get(i).alive)
+                if (OpponentCard.size()>0)
                 {
-                    System.out.println(OpponentCard.get(i).toString());
-                    System.out.println("before"+OpponentCard.get(i).HP);
-                    shoot(OpponentCard.get(i));
-                    System.out.println("after"+OpponentCard.get(i).HP);
+                    if (OpponentCard.get(i).alive)
+                    {
+                        System.out.println(OpponentCard.get(i).toString());
+                        System.out.println("before"+OpponentCard.get(i).HP);
+                        shoot(OpponentCard.get(i));
+                        System.out.println("after"+OpponentCard.get(i).HP);
 
-                }else {i++;}
+                    }else {i++;}
+                }
             }
+
         }
 
     }
-    public void shoot(Card card)
+    public void shoot(Playground card)
     {
         card.HP-=this.Damage;
     }
@@ -71,12 +49,10 @@ public class KingTower extends Tower{
         CanShoot = canShoot;
     }
     public void CheckCanShoot() {
-        System.out.println(level);
           if(HP<Hplevel.get(level)){
 
               CanShoot=true;
 
           }
-        System.out.println(CanShoot);
     }
 }

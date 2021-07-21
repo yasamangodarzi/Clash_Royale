@@ -25,7 +25,25 @@ public class Main {
             System.out.println(c.toString());
         }
         System.out.println( "-----------------");
-         //gameManagement.setGameManagement(player,player2);
+           gameManagement.setGameManagement(player,player2);
+        Barbarians barbarians=new Barbarians();
+        Archer archer=new Archer();
+        PEKKA pekka=new PEKKA();
+        pekka.HP=100;
+        pekka.alive=true;
+        archer.HP=100;
+        archer.alive=true;
+Cannon cannon=new Cannon();
+cannon.HP=100;
+cannon.alive=true;
+        Giant giant=new Giant();
+//        giant.alive=true;
+//        giant.HP=100;
+        BabyDragon babyDragon=new BabyDragon();
+        babyDragon.HP=100;
+        babyDragon.alive=true;
+       giant.OpponentCard.add(cannon);
+        gameManagement.addCard(giant,1,12,14);
 
        // gameManagement.addCard(player.existCard.get(3),1,13,2);
 ////        System.out.println(player.existCard.size());

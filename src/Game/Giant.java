@@ -4,9 +4,9 @@ public class Giant extends Soldier{
     public Giant() {
         speed=Speed.SLOW;
         target=Target.BUILDING;
-        HitSpeed=1.5;
-        // Range
-        //Is Area Splash
+        HitSpeed=1500;
+        Range=0;
+        AreaSplash=false;
         Count=1;
         cost=5;
         setCardName("Giant");
@@ -16,13 +16,16 @@ public class Giant extends Soldier{
     public String toString() {
         return "Giant{" +
                 "cost=" + cost +
+                ", Range=" + Range +
                 ", Damage=" + Damage +
                 ", HP=" + HP +
+                ", OpponentCard=" + OpponentCard +
                 ", HitSpeed=" + HitSpeed +
+                ", alive=" + alive +
                 ", target=" + target +
-                ", mode=" + mode +
-                ", GameEndTime=" + GameEndTime +
+                ", location=" + location +
                 ", speed=" + speed +
+                ", AreaSplash=" + AreaSplash +
                 ", Count=" + Count +
                 '}';
     }

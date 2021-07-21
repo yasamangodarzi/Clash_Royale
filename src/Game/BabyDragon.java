@@ -4,9 +4,9 @@ public class BabyDragon extends Soldier{
     public BabyDragon() {
         speed=Speed.FAST;
         target=Target.AIR_GROUND;
-        HitSpeed=1.8;
-        // Range
-        //Is Area Splash
+        HitSpeed=1800;
+        Range=3;
+        AreaSplash=true;
         Count=1;
         cost=4;
         setCardName("BabyDragon");
@@ -16,13 +16,16 @@ public class BabyDragon extends Soldier{
     public String toString() {
         return "BabyDragon{" +
                 "cost=" + cost +
+                ", Range=" + Range +
                 ", Damage=" + Damage +
                 ", HP=" + HP +
+                ", OpponentCard=" + OpponentCard +
                 ", HitSpeed=" + HitSpeed +
+                ", alive=" + alive +
                 ", target=" + target +
-                ", mode=" + mode +
-                ", GameEndTime=" + GameEndTime +
+                ", location=" + location +
                 ", speed=" + speed +
+                ", AreaSplash=" + AreaSplash +
                 ", Count=" + Count +
                 '}';
     }

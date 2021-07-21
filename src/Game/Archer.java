@@ -4,9 +4,9 @@ public class Archer extends Soldier{
     public Archer() {
         speed=Speed.MEDIUM;
         target=Target.AIR_GROUND;
-        HitSpeed=1.2;
-        // Range
-        //Is Area Splash
+        HitSpeed=1200;
+        Range=5;
+        AreaSplash=false;
         Count=2;
         cost=3;
         setCardName("Archer");
@@ -16,13 +16,16 @@ public class Archer extends Soldier{
     public String toString() {
         return "Archer{" +
                 "cost=" + cost +
+                ", Range=" + Range +
                 ", Damage=" + Damage +
                 ", HP=" + HP +
+                ", OpponentCard=" + OpponentCard +
                 ", HitSpeed=" + HitSpeed +
+                ", alive=" + alive +
                 ", target=" + target +
-                ", mode=" + mode +
-                ", GameEndTime=" + GameEndTime +
+                ", location=" + location +
                 ", speed=" + speed +
+                ", AreaSplash=" + AreaSplash +
                 ", Count=" + Count +
                 '}';
     }

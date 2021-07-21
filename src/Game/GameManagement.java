@@ -15,6 +15,8 @@ public class GameManagement {
     public ArrayList<Card> InGameCards=new ArrayList<>();
     public ArrayList<Card> CardPlayer1=new ArrayList<>();
     public ArrayList<Playground>  Player1=new ArrayList<>();
+    public ArrayList<Tower>  Player1Tower=new ArrayList<>();
+    public ArrayList<Tower>  Player2Tower=new ArrayList<>();
     public ArrayList<Card> CardPlayer2=new ArrayList<>();
     public ArrayList<Playground>  Player2=new ArrayList<>();
     public String loser = "";
@@ -35,14 +37,14 @@ public class GameManagement {
         level.SetTower(player2.towers, player1.level());
         elixirPlayerHashMap.put(elixirPlayer1,player1);
         elixirPlayerHashMap.put(elixirPlayer2,player2);
-        for (Tower t: player1.towers) {t.alive=true; Player1.add(t);}
-        for (Tower t: player2.towers) {t.alive=true; Player2.add(t);}
+        for (Tower t: player1.towers) {t.alive=true; Player1.add(t); Player1Tower.add(t);}
+        for (Tower t: player2.towers) {t.alive=true; Player2.add(t);Player2Tower.add(t);}
 
     }
 
 
     public void StartGame(Player player1,Player player2){
-        setGameManagement(player1, player2);
+       // setGameManagement(player1, player2);
         System.out.println("set");
 
         long startTime = System.nanoTime();
@@ -51,27 +53,27 @@ public class GameManagement {
         while(timeElapsed != 180000 ){
             if (CheckEndGame())
             {
+                CheckPrincessTowerDie();
                 //The first 2 minutes of the game
                 for (Playground c:Player1) {
                     if (c.HP>0)
                     {
                         c.doAction(timeElapsed);
-                        c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
-                                Player2,c.Range);
+                        //c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                             // Player2,c.Range);
+
                     }
                     else
                     {
                         c.alive=false;
                     }
-
-
                 }
                 for (Playground c:Player2) {
                     if (c.HP>0)
                     {
                         c.doAction(timeElapsed);
-                        c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
-                                Player1,c.Range);
+                       // c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                               // Player1,c.Range);
                     }
                     else{
                         c.alive=false;
@@ -146,15 +148,15 @@ public class GameManagement {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        if (!(player2 instanceof robot))
-        {
-            File file2=new File(String.valueOf(player2.level()),!resultGame,player2.existCard);
-            try {
-                file2.CreatFilePlayer();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
+//        if (!(player2 instanceof robot))
+//        {
+//            File file2=new File(String.valueOf(player2.level()),!resultGame,player2.existCard);
+//            try {
+//                file2.CreatFilePlayer();
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//        }
 
     }
     public Player getPlayer1() {
@@ -170,7 +172,7 @@ public class GameManagement {
         cards.add(card);
         if (a==1)
         {
-             level.SetCard(cards, player1.getLevel());
+             level.SetCard(cards, player1.level());
             elixirPlayer1.lowerElixir(card.cost);
             card.alive=true;
            card.getLocation().setRow(row);
@@ -178,7 +180,7 @@ public class GameManagement {
             CardPlayer1.add(card);
             Player1.add(card);
         }else if (a==2){
-            level.SetCard(cards, player2.getLevel());
+            level.SetCard(cards, player2.level());
             elixirPlayer2.lowerElixir(card.cost);
             card.alive=true;
             card.getLocation().setRow(row);
@@ -236,6 +238,38 @@ public class GameManagement {
     public int getExlixirplayer2()
     {
         return elixirPlayer2.getElixir();
+    }
+    public void CheckPrincessTowerDie()
+    {
+        boolean king1=false;
+        for (Playground t:Player1) {
+            if (t.HP<0 && !(t.alive) && t instanceof PrincessTower){
+                king1=true;
+            }
+        }
+        if (king1)
+        {
+            for (Playground t:Player1) {
+                if (  t instanceof KingTower){
+                    ((KingTower) t).setCanShoot(true);
+                }
+            }
+        }
+        boolean king2=false;
+        for (Playground t: Player2) {
+            if (t.HP<0 && !(t.alive) && t instanceof PrincessTower){
+                king2=true;
+            }
+        }
+        if (king2)
+        {
+            for (Playground t:Player2) {
+                if (  t instanceof KingTower){
+                    ((KingTower) t).setCanShoot(true);
+                }
+            }
+        }
+
     }
  
 }
