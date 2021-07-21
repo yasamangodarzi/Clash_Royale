@@ -170,6 +170,7 @@ public class GameManagement {
     {
         ArrayList<Card>cards=new ArrayList<>();
         cards.add(card);
+
         if (a==1)
         {
              level.SetCard(cards, player1.level());
@@ -179,6 +180,33 @@ public class GameManagement {
            card.getLocation().setColumn(clo);
             CardPlayer1.add(card);
             Player1.add(card);
+            if (card instanceof Building)
+            {
+                 System.out.println("life time start ");
+                Thread thread=new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        long StartTime = System.nanoTime();
+                        long TimeElapsed = 0;
+                        while(TimeElapsed != ((Building) card).lifeTime ) {
+                            long EndTime = System.nanoTime();
+                             TimeElapsed = (EndTime - StartTime) / 1000000;
+                        }
+                         System.out.println("finish life time");
+                        card.alive=false;
+                        card.HP=-1;
+                        for (Playground p:Player1) {
+                            if (p.equals(card))
+                            {
+                                p.alive=false;
+                                p.HP=-1;
+                            }
+                        }
+                    }
+                });
+                thread.start();
+            }
         }else if (a==2){
             level.SetCard(cards, player2.level());
             elixirPlayer2.lowerElixir(card.cost);
@@ -187,7 +215,34 @@ public class GameManagement {
             card.getLocation().setColumn(clo);
             CardPlayer2.add(card);
             Player2.add(card);
+            if (card instanceof Building)
+            {
+
+                Thread thread=new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        long StartTime = System.nanoTime();
+                        long TimeElapsed = 0;
+                        while(TimeElapsed != ((Building) card).lifeTime ) {
+                            long EndTime = System.nanoTime();
+                            TimeElapsed = (EndTime - StartTime) / 1000000;
+
+                        }
+                        card.alive=false;
+                        for (Playground p:Player2) {
+                                if (p.equals(card))
+                                {
+                                    p.alive=false;
+                                }
+                        }
+                    }
+                });
+                thread.start();
+            }
         }
+
+
 
         InGameCards.add(card);
 

@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Archer.
+ */
 public class Archer extends Soldier{
+    /**
+     * Instantiates a new Archer.
+     */
     public Archer() {
         speed=Speed.MEDIUM;
         target=Target.AIR_GROUND;

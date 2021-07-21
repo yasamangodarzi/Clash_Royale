@@ -66,9 +66,6 @@ public class PrincessTower extends Tower{
         }
 
 
-    public void shoot(Playground card)
-    {
-        card.HP-=this.Damage;
-    }
+
 
 }

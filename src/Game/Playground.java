@@ -110,5 +110,21 @@ public class Playground extends CommonGameData{
         }
         return  true;
     }
+    public void shoot(Playground card)
+    {
+        card.HP-=this.Damage;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Playground that = (Playground) o;
+        return Objects.equals(location, that.location) && speed == that.speed;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(location, speed);
+    }
 }

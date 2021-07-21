@@ -41,10 +41,7 @@ public class KingTower extends Tower{
         }
 
     }
-    public void shoot(Playground card)
-    {
-        card.HP-=this.Damage;
-    }
+
     public void setCanShoot(boolean canShoot) {
         CanShoot = canShoot;
     }

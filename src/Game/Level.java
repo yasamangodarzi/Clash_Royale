@@ -244,32 +244,36 @@ public class Level {
 
                 }
             }
-            // change damage
             if (c instanceof InfernoTower) {
                 switch (level) {
                     case 1: {
                         c.setHP(800);
-                        c.setDamage(325);
+                        c.setDamage(20);
+                        ((InfernoTower) c).setHighDamage(400);
                         break;
                     }
                     case 2: {
                         c.setHP(880);
-                        c.setDamage(357);
+                        c.setDamage(22);
+                        ((InfernoTower) c).setHighDamage(440);
                         break;
                     }
                     case 3: {
                         c.setHP(968);
-                        c.setDamage(393);
+                        c.setDamage(24);
+                        ((InfernoTower) c).setHighDamage(484);
                         break;
                     }
                     case 4: {
                         c.setHP(1064);
-                        c.setDamage(432);
+                        c.setDamage(26);
+                        ((InfernoTower) c).setHighDamage(532);
                         break;
                     }
                     case 5: {
                         c.setHP(1168);
-                        c.setDamage(474);
+                        c.setDamage(29);
+                        ((InfernoTower) c).setHighDamage(584);
                         break;
                     }
 

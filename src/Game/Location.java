@@ -27,5 +27,12 @@ public class Location {
     public  void setColumn(int column) {
         Location.column = column;
     }
+    @Override
+    public String toString() {
+        return "Location{" +
+                "row=" + row+
+                ", column=" + column +
+                '}';
+    }
 
 }
