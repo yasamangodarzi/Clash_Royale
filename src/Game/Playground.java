@@ -62,7 +62,9 @@ public class Playground extends CommonGameData{
         }
         return goal;
     }
+ 
     public void doAction(long milisecond) {}
+ 
     public boolean CheckTarget(Playground playground)
     {
         Target target1=target;
@@ -77,7 +79,6 @@ public class Playground extends CommonGameData{
         }
         else if (playground instanceof Soldier || playground instanceof Building)
         {
-
 
             if (target1.equals(Target.AIR_GROUND)){return true;}
             if (target1.equals(Target.GROUND))
@@ -94,14 +95,11 @@ public class Playground extends CommonGameData{
             }
             if (target1.equals(Target.BUILDING))
             {
-
                 if ((playground instanceof Building))
                 {
-
                     return true;
                 }else
                 {
-
                     return false;
                 }
             }
