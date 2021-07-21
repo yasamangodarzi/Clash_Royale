@@ -94,6 +94,7 @@ public class DetermineHandCards{
             Random random = new Random();
             int randomNumber = random.nextInt();
             hashSet.add(arrayList.get(randomNumber));
+
         }
         return hashSet;
     }
