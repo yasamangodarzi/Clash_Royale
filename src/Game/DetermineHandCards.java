@@ -10,7 +10,6 @@ public class DetermineHandCards{
 
     //constructor
     public DetermineHandCards(ArrayList<Card> PlayerCard){
-//        GameManagement gameManagement = new GameManagement();
         CardElixirSet();
         CardOfElixir = PlayerCard;
     }
@@ -59,15 +58,15 @@ public class DetermineHandCards{
         // and are activated according to the number of elixirs (less equal).
 
         Random random = new Random();
-        int randNumber1 = (random.nextInt(ArrayForPlayGround.size()) + 1);
+        int randNumber1 = random.nextInt(ArrayForPlayGround.size());
         resultDeterminingCards.add(ArrayForPlayGround.get(randNumber1));
         ArrayForPlayGround.remove(randNumber1);
         PlayerCard.remove(randNumber1);
-        int randNumber2 = (random.nextInt(ArrayForPlayGround.size()) + 1);
+        int randNumber2 = random.nextInt(ArrayForPlayGround.size());
         resultDeterminingCards.add(ArrayForPlayGround.get(randNumber2));
         ArrayForPlayGround.remove(randNumber2);
         PlayerCard.remove(randNumber2);
-        int randNumber3 = (random.nextInt(ArrayForPlayGround.size()) + 1);
+        int randNumber3 = random.nextInt(ArrayForPlayGround.size());
         resultDeterminingCards.add(ArrayForPlayGround.get(randNumber3));
         ArrayForPlayGround.remove(randNumber3);
         PlayerCard.remove(randNumber3);
@@ -75,7 +74,7 @@ public class DetermineHandCards{
         for(int m = 0; m < PlayerCard.size(); m++){
             for(int n = 0; n < ArrayForPlayGround.size(); n++){
                 if(PlayerCard.get(m) != ArrayForPlayGround.get(n)){
-                    int randNumber4 = (random.nextInt(PlayerCard.size()) + 1);
+                    int randNumber4 = random.nextInt(PlayerCard.size());
                     resultDeterminingCards.add(ArrayForPlayGround.get(randNumber4));
                     PlayerCard.remove(randNumber4);
                 }
@@ -87,5 +86,15 @@ public class DetermineHandCards{
             }
         }
         return resultDeterminingCards;
+    }
+
+    public HashSet<Card> CreatOneCard(HashSet<Card> hashSet, ArrayList<Card> arrayList, Card card){
+        hashSet.remove(card);
+        while(hashSet.size() == 4) {
+            Random random = new Random();
+            int randomNumber = random.nextInt();
+            hashSet.add(arrayList.get(randomNumber));
+        }
+        return hashSet;
     }
 }
