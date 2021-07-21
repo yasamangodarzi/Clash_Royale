@@ -29,7 +29,6 @@ public class File {
         file.writeObject("F:/ClashRoyal/" + Level + ".txt", information);
     }
 
-
     /**
      * This method has the ability to return a list of directories in a specific address
      * @param name name file
