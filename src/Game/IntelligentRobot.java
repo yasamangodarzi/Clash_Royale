@@ -3,7 +3,8 @@ package Game;
 public class IntelligentRobot extends robot{
 
     //filed
-
+    private ArrayList<Playground> rival =new ArrayList<>();
+  
     //constructor
     /**
      * Instantiates a new Robot.
@@ -15,7 +16,7 @@ public class IntelligentRobot extends robot{
     }
 
 
-//    public Card intelligentRobot(){
-//
-//    }
+   public Card intelligentRobot(rival ,){
+
+   }
 }
