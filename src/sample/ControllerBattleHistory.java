@@ -123,17 +123,65 @@ public class ControllerBattleHistory {
 
     @FXML
     void Level1(MouseEvent event) {
-        commonMethodBattleHistory(1, Explanation1, yesOrNo1);
+//        commonMethodBattleHistory(1, Explanation1, yesOrNo1);
+//        Change the default mode battle history page
+//        yes and winner
+        try {
+            stream = new FileInputStream(imageYesIcon);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image imageYes = new Image(stream);
+        yesOrNo1.setImage(imageYes);
+        try {
+            stream = new FileInputStream(imageInformationWinner);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image imageWinner = new Image(stream);
+        Explanation1.setImage(imageWinner);
     }
 
     @FXML
     void Level2(MouseEvent event) {
-        commonMethodBattleHistory(2, Explanation2, yesOrNo2);
+//        commonMethodBattleHistory(2, Explanation2, yesOrNo2);
+//        Change the default mode battle history page
+//        yes and loser
+        try {
+            stream = new FileInputStream(imageYesIcon);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image imageYes = new Image(stream);
+        yesOrNo2.setImage(imageYes);
+        try {
+            stream = new FileInputStream(imageInformationLoser);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image imageLoser = new Image(stream);
+        Explanation2.setImage(imageLoser);
     }
 
     @FXML
     void Level3(MouseEvent event) {
-        commonMethodBattleHistory(3, Explanation3, yesOrNo3);
+//        commonMethodBattleHistory(3, Explanation3, yesOrNo3);
+//        Change the default mode battle history page
+//        No
+        try {
+            stream = new FileInputStream(imageNoIcon);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image imageNo = new Image(stream);
+        yesOrNo3.setImage(imageNo);
+        try {
+            stream = new FileInputStream(imageInformationNo);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image imageNot = new Image(stream);
+        Explanation3.setImage(imageNot);
     }
 
     @FXML

@@ -61,4 +61,26 @@ public class IntelligentRobot extends robot{
     public void Play(){
         intelligentRobot();
     }
+
+    public Location CreateRandomLocation(){
+        ArrayList<Playground> rivalCard = new ArrayList<>();
+        for (Playground playground: rival
+        ) {
+            if(playground.alive){
+                rivalCard.add(playground);
+            }
+        }
+        Playground playground = new Playground();
+        ArrayList<Playground> nearRivalCard = playground.DetectProximityTargetCard(0, 6,
+                rivalCard, 11.5);
+        int rowRival = nearRivalCard.get(0).getLocation().getRow();
+        int columnRival = nearRivalCard.get(0).getLocation().getColumn();
+        Random random = new Random();
+        int randomRangeRow = random.nextInt(rowRival + 5);
+        int randomRangeColumn = random.nextInt(columnRival + 5);
+        Location location = new Location();
+        location.setRow(randomRangeRow);
+        location.setColumn(randomRangeColumn);
+        return location;
+    }
 }
