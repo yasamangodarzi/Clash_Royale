@@ -52,7 +52,9 @@ public class ControllerTimePlayGroundGame {
                 new KeyFrame(Duration.seconds(1))
         );
         clock.setCycleCount(Animation.INDEFINITE);
-        clock.play();
-
+        if(testBool)
+            clock.play();
+        else
+            clock.stop();
     }
 }

@@ -26,6 +26,8 @@ public class DetermineHandCards{
         Rage rage = new Rage();
         FireBall fireBall = new FireBall();
         Arrows arrows = new Arrows();
+        Cannon cannon = new Cannon();
+        InfernoTower infernoTower = new InfernoTower();
         setCardElixir.computeIfAbsent(5, k ->new ArrayList<>()).add(barbarians);
         setCardElixir.computeIfAbsent(3, k ->new ArrayList<>()).add(archer);
         setCardElixir.computeIfAbsent(4, k ->new ArrayList<>()).add(babyDragon);
@@ -36,6 +38,8 @@ public class DetermineHandCards{
         setCardElixir.computeIfAbsent(3, k ->new ArrayList<>()).add(rage);
         setCardElixir.computeIfAbsent(4, k ->new ArrayList<>()).add(fireBall);
         setCardElixir.computeIfAbsent(3, k ->new ArrayList<>()).add(arrows);
+        setCardElixir.computeIfAbsent(3, k ->new ArrayList<>()).add(cannon);
+        setCardElixir.computeIfAbsent(3, k ->new ArrayList<>()).add(infernoTower);
     }
 
     public HashSet<Card> DeterminingTheEndOfTheCards(int elixir, ArrayList<Card> PlayerCard){
