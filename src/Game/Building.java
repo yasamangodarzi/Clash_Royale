@@ -20,6 +20,10 @@ public class Building extends Card{
                     playground = OpponentCard.get(i);
                     if (CheckTarget(OpponentCard.get(i))) {
                         System.out.println("before" + OpponentCard.get(i).HP);
+                        if (this instanceof InfernoTower)
+                        {
+                            ((InfernoTower) this).increseDamage(OpponentCard.get(i));
+                        }
                         shoot(OpponentCard.get(i));
                         System.out.println("after" + OpponentCard.get(i).HP);
                         timefirst = milsecond;
