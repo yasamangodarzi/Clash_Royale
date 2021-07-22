@@ -14,22 +14,7 @@ public class Elixir extends CommonGameData{
     /**
      * ChangeElixir.
      */
-//    public int changeElixir(boolean GameEndTime){
-//        long start = System.currentTimeMillis();
-//        int Dif;
-//        do {
-//            long end = System.currentTimeMillis();
-//            long dif = end - start;
-//            Dif = (int) (dif * (0.001));
-//        }while(Dif != 1);
-//        if (elixir < 10){
-//            if(!GameEndTime)
-//                elixir = elixir + 2;
-//            else
-//                elixir = elixir + 4;
-//        }
-//        return elixir;
-//    }
+
     public void Change(boolean b)
     {
         if (b)

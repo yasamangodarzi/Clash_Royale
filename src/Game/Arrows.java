@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Arrows.
+ */
 public class Arrows extends Spell{
+    /**
+     * Instantiates a new Arrows.
+     */
     public Arrows() {
         setCardName("arrows");
         Radius=4;

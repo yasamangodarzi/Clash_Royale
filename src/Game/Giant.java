@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Giant.
+ */
 public class Giant extends Soldier{
+    /**
+     * Instantiates a new Giant.
+     */
     public Giant() {
         speed=Speed.SLOW;
         target=Target.BUILDING;

@@ -1,10 +1,20 @@
 package Game;
 
+/**
+ * The type Building.
+ */
 public class Building extends Card{
-     protected int lifeTime;
+    /**
+     * The Life time.
+     */
+    protected int lifeTime;
      private int i=0;
     private long timefirst=0;
     private Playground playground=new Playground();
+
+    /**
+     * Instantiates a new Building.
+     */
     public Building(){
         speed = Speed.MEDIUM;
     }

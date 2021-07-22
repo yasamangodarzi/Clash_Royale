@@ -1,8 +1,14 @@
 package Game;
 
+/**
+ * The type Princess tower.
+ */
 public class PrincessTower extends Tower{
  private long timefirst=0;
 
+    /**
+     * Instantiates a new Princess tower.
+     */
     public PrincessTower() {
         HitSpeed=800;
         Range=7.5;
@@ -34,7 +40,13 @@ public class PrincessTower extends Tower{
 //        HPSet();
 //        return LevelGameHP.get(GameLevel);
 
+    /**
+     * The .
+     */
     int i=0;
+    /**
+     * The Playground.
+     */
     Playground playground=new Playground();
 @Override
     public void doAction(long milsecond) {

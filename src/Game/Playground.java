@@ -2,21 +2,53 @@ package Game;
 
 import java.util.*;
 
+/**
+ * The type Playground.
+ */
 public class Playground extends CommonGameData{
- protected Location location=new Location();
+    /**
+     * The Location.
+     */
+    protected Location location=new Location();
+    /**
+     * The Space.
+     */
     List<Integer> Space = new ArrayList<>();
+    /**
+     * The Goals distance card.
+     */
     Map<Integer, ArrayList<Playground>> GoalsDistanceCard = new HashMap<>();
- protected Speed speed;
+    /**
+     * The Speed.
+     */
+    protected Speed speed;
 
+    /**
+     * Instantiates a new Playground.
+     */
     public Playground() {
         HashMap<Integer, Integer>LevelGameHP = new HashMap<>();
         HashMap<Integer, Integer>LevelGameHitSpeed = new HashMap<>();
     }
 
+    /**
+     * Gets location.
+     *
+     * @return the location
+     */
     public Location getLocation() {
         return location;
     }
 
+    /**
+     * Detect proximity target card array list.
+     *
+     * @param DestinationRow    the destination row
+     * @param DestinationColumn the destination column
+     * @param ArrayCardOrigin   the array card origin
+     * @param Range             the range
+     * @return the array list
+     */
     public ArrayList<Playground> DetectProximityTargetCard(int DestinationRow, int DestinationColumn,
                                                  ArrayList<Playground>ArrayCardOrigin,
                                                 double Range) {
@@ -63,8 +95,19 @@ public class Playground extends CommonGameData{
         return goal;
     }
 
+    /**
+     * Do action.
+     *
+     * @param milisecond the milisecond
+     */
     public void doAction(long milisecond) {}
- 
+
+    /**
+     * Check target boolean.
+     *
+     * @param playground the playground
+     * @return the boolean
+     */
     public boolean CheckTarget(Playground playground)
     {
         Target target1=target;
@@ -108,6 +151,12 @@ public class Playground extends CommonGameData{
         }
         return  true;
     }
+
+    /**
+     * Shoot.
+     *
+     * @param card the card
+     */
     public void shoot(Playground card)
     {
         card.HP-=this.Damage;

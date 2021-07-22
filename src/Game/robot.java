@@ -87,7 +87,7 @@ public class robot extends Player{
             AllCard.remove(randomNumber);
         }
     }
-
+    @Override
     public void Play(){
         createRandomCard();
     }

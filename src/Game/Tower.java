@@ -5,19 +5,30 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * The type Tower.
+ */
 public   class Tower extends Playground{
 
     //filed
     private int ShootingTime;
     private int CheckPrincessLife;
     private int LifeKing;
+    /**
+     * The Level game hp.
+     */
     public HashMap<Integer, Integer>LevelGameHP;
+    /**
+     * The Level game damage.
+     */
     public HashMap<Integer, Integer>LevelGameDamage;
 //    private Speed speedTower = Speed.MEDIUM;
 
 
-
-    //constructor
+    /**
+     * Instantiates a new Tower.
+     */
+//constructor
     public Tower(){
 //        Range = 7;
 
@@ -27,15 +38,30 @@ public   class Tower extends Playground{
         HashMap<Integer, Integer>LevelGameHitSpeed = new HashMap<>();
     }
 
-    //method
+    /**
+     * Gets shooting time.
+     *
+     * @return the shooting time
+     */
+//method
     public int getShootingTime() {
         return ShootingTime;
     }
 
+    /**
+     * Sets shooting time.
+     *
+     * @param shootingTime the shooting time
+     */
     public void setShootingTime(int shootingTime) {
         ShootingTime = shootingTime;
     }
 
+    /**
+     * Get life king int.
+     *
+     * @return the int
+     */
     public int  getLifeKing(){
         return LifeKing;
     }

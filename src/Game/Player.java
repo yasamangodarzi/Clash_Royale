@@ -108,4 +108,7 @@ public class Player {
                 ", xp=" + xp +
                 '}';
     }
+    public void Play(){
+
+    }
 }

@@ -4,24 +4,42 @@ import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * The type Soldier.
+ */
 public class Soldier extends Card{
- //    protected Speed speed ;
+    /**
+     * The Area splash.
+     */
+//    protected Speed speed ;
     protected boolean AreaSplash;
-   protected int Count;
+    /**
+     * The Count.
+     */
+    protected int Count;
    private  long timefirst=0;
    private  long time=0;
 //   private boolean shott=false;
 //   private boolean move=false;
 
 
+    /**
+     * Instantiates a new Soldier.
+     */
     public Soldier( ) {
 
     }
 
+    /**
+     * Soldier move.
+     */
     public void SoldierMove(){
 
     }
     private Playground playground=new Playground();
+    /**
+     * The .
+     */
     int i=0;
 
 
@@ -50,6 +68,11 @@ public class Soldier extends Card{
         return Objects.hash(AreaSplash, Count, timefirst);
     }
 
+    /**
+     * Gets .
+     *
+     * @param milisecond the milisecond
+     */
 //    public Speed getSpeed() {
 //        return speed;
 //    }
@@ -86,6 +109,12 @@ public class Soldier extends Card{
 //
 //        }
     }
+
+    /**
+     * Attack.
+     *
+     * @param milsecond the milsecond
+     */
     public void Attack(long milsecond)
     {
         if (milsecond-timefirst==HitSpeed)
@@ -133,6 +162,12 @@ public class Soldier extends Card{
             }
         }
     }
+
+    /**
+     * Check element alive boolean.
+     *
+     * @return the boolean
+     */
     public boolean checkElementAlive()
     {
         boolean alive=false;

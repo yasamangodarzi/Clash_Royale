@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Fire ball.
+ */
 public class FireBall extends Spell{
+    /**
+     * Instantiates a new Fire ball.
+     */
     public FireBall() {
         setCardName("fireball");
         Radius=2.5;

@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Baby dragon.
+ */
 public class BabyDragon extends Soldier{
+    /**
+     * Instantiates a new Baby dragon.
+     */
     public BabyDragon() {
         speed=Speed.FAST;
         target=Target.AIR_GROUND;

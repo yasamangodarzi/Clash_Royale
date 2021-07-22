@@ -4,6 +4,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * The type Game management.
+ */
 public class GameManagement {
     private HashMap<Elixir,Player> elixirPlayerHashMap=new HashMap<>();
     private Level level=new Level();
@@ -11,23 +14,61 @@ public class GameManagement {
     private Elixir elixirPlayer2=new Elixir();
     private Player player1 ;
     private Player player2 ;
+    /**
+     * The Field.
+     */
     public Field field=new Field();
+    /**
+     * The In game cards.
+     */
     public ArrayList<Card> InGameCards=new ArrayList<>();
+    /**
+     * The Card player 1.
+     */
     public ArrayList<Card> CardPlayer1=new ArrayList<>();
+    /**
+     * The Player 1.
+     */
     public ArrayList<Playground>  Player1=new ArrayList<>();
+    /**
+     * The Player 1 tower.
+     */
     public ArrayList<Tower>  Player1Tower=new ArrayList<>();
+    /**
+     * The Player 2 tower.
+     */
     public ArrayList<Tower>  Player2Tower=new ArrayList<>();
+    /**
+     * The Card player 2.
+     */
     public ArrayList<Card> CardPlayer2=new ArrayList<>();
+    /**
+     * The Player 2.
+     */
     public ArrayList<Playground>  Player2=new ArrayList<>();
+    /**
+     * The Loser.
+     */
     public String loser = "";
+    /**
+     * The Win.
+     */
     public String win = "";
     private boolean King1Alive=true;
    private boolean King2Alive=true;
    private  int hpPlayer1=0;
    private  int hpPlayer2=0;
    private boolean first=true;
+   private double RangePlayer1=0.5;
+   private double RangePlayer2=0.5;
 
 
+    /**
+     * Sets game management.
+     *
+     * @param player1 the player 1
+     * @param player2 the player 2
+     */
     public void setGameManagement(Player player1,Player player2) {
         this.player1=player1;
         this.player2=player2;
@@ -43,6 +84,12 @@ public class GameManagement {
     }
 
 
+    /**
+     * Start game.
+     *
+     * @param player1 the player 1
+     * @param player2 the player 2
+     */
     public void StartGame(Player player1,Player player2){
          setGameManagement(player1, player2);
         System.out.println("set");
@@ -54,6 +101,7 @@ public class GameManagement {
             if (CheckEndGame())
             {
                 CheckPrincessTowerDie();
+                changeRange();
                 //The first 2 minutes of the game
                 for (Playground c:Player1) {
                     if (c instanceof Spell)
@@ -184,13 +232,33 @@ public class GameManagement {
         }
 
     }
+
+    /**
+     * Gets player 1.
+     *
+     * @return the player 1
+     */
     public Player getPlayer1() {
         return player1;
     }
 
+    /**
+     * Gets player 2.
+     *
+     * @return the player 2
+     */
     public Player getPlayer2() {
         return player2;
     }
+
+    /**
+     * Add card.
+     *
+     * @param card the card
+     * @param a    the a
+     * @param row  the row
+     * @param clo  the clo
+     */
     public void addCard(Card card, int a,int row,int clo)
     {
         ArrayList<Card>cards=new ArrayList<>();
@@ -273,6 +341,12 @@ public class GameManagement {
         InGameCards.add(card);
 
     }
+
+    /**
+     * Check end game boolean.
+     *
+     * @return the boolean
+     */
     public boolean CheckEndGame()
     {
 
@@ -302,24 +376,52 @@ public class GameManagement {
         }
         return true;
     }
+
+    /**
+     * Gets player 1 card list.
+     *
+     * @return the player 1 card list
+     */
     public ArrayList<Card> getPlayer1CardList()
     {
 
         return player1.existCard;
     }
+
+    /**
+     * Gets player 2 card list.
+     *
+     * @return the player 2 card list
+     */
     public ArrayList<Card> getPlayer2CardList()
     {
 
         return player1.existCard;
     }
+
+    /**
+     * Gets exlixir player 1.
+     *
+     * @return the exlixir player 1
+     */
     public int getExlixirPlayer1()
     {
         return elixirPlayer1.getElixir();
     }
+
+    /**
+     * Gets exlixirplayer 2.
+     *
+     * @return the exlixirplayer 2
+     */
     public int getExlixirplayer2()
     {
         return elixirPlayer2.getElixir();
     }
+
+    /**
+     * Check princess tower die.
+     */
     public void CheckPrincessTowerDie()
     {
         boolean king1=false;
@@ -353,4 +455,43 @@ public class GameManagement {
 
     }
 
+    /**
+     * Change range.
+     */
+    public void changeRange()
+    {
+        if (Player1Tower.size()==2)
+        {
+            RangePlayer1=0.75;
+        } if (Player1Tower.size()==1)
+        {
+            RangePlayer1=0.85;
+        }
+        if (Player2Tower.size()==2)
+        {
+            RangePlayer2=0.75;
+        } if (Player2Tower.size()==1)
+        {
+            RangePlayer2=0.85;
+        }
+
+    }
+
+    /**
+     * Gets range player 1.
+     *
+     * @return the range player 1
+     */
+    public double getRangePlayer1() {
+        return RangePlayer1;
+    }
+
+    /**
+     * Gets range player 2.
+     *
+     * @return the range player 2
+     */
+    public double getRangePlayer2() {
+        return RangePlayer2;
+    }
 }

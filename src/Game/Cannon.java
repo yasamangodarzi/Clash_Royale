@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Cannon.
+ */
 public class Cannon extends Building{
+    /**
+     * Instantiates a new Cannon.
+     */
     public Cannon() {
         HitSpeed=800;
         target=Target.GROUND;

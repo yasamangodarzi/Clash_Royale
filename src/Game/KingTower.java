@@ -2,11 +2,20 @@ package Game;
 
 import java.util.HashMap;
 
+/**
+ * The type King tower.
+ */
 public class KingTower extends Tower{
      private HashMap<Integer,Integer> Hplevel=new HashMap<>();
      private int level;
     private long timefirst=0;
     private boolean CanShoot=false;
+
+    /**
+     * Instantiates a new King tower.
+     *
+     * @param level the level
+     */
     public KingTower(int level) {
         Hplevel.put(1,2400);
         Hplevel.put(2,2568);
@@ -42,9 +51,18 @@ public class KingTower extends Tower{
 
     }
 
+    /**
+     * Sets can shoot.
+     *
+     * @param canShoot the can shoot
+     */
     public void setCanShoot(boolean canShoot) {
         CanShoot = canShoot;
     }
+
+    /**
+     * Check can shoot.
+     */
     public void CheckCanShoot() {
           if(HP<Hplevel.get(level)){
 

@@ -1,7 +1,13 @@
 package Game;
 
+/**
+ * The type Rage.
+ */
 public class Rage extends Spell{
 
+    /**
+     * Instantiates a new Rage.
+     */
     public Rage() {
         setCardName("rage");
         cost=3;
@@ -19,10 +25,20 @@ public class Rage extends Spell{
                 '}';
     }
 
+    /**
+     * Gets duration.
+     *
+     * @return the duration
+     */
     public double getDuration() {
         return Duration;
     }
 
+    /**
+     * Sets duration.
+     *
+     * @param duration the duration
+     */
     public void setDuration(double duration) {
         Duration = duration;
     }

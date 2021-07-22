@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Wizard.
+ */
 public class Wizard extends Soldier{
+    /**
+     * Instantiates a new Wizard.
+     */
     public Wizard() {
         speed=Speed.MEDIUM;
         target=Target.AIR_GROUND;

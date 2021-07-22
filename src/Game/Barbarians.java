@@ -1,7 +1,13 @@
 package Game;
 
+/**
+ * The type Barbarians.
+ */
 public class Barbarians extends Soldier{
 
+    /**
+     * Instantiates a new Barbarians.
+     */
     public Barbarians() {
         speed=Speed.MEDIUM;
         target=Target.GROUND;

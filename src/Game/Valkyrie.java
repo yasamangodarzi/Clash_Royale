@@ -1,6 +1,12 @@
 package Game;
 
+/**
+ * The type Valkyrie.
+ */
 public class Valkyrie extends Soldier{
+    /**
+     * Instantiates a new Valkyrie.
+     */
     public Valkyrie() {
         speed=Speed.MEDIUM;
         target=Target.GROUND;

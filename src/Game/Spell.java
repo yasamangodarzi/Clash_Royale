@@ -2,14 +2,37 @@ package Game;
 
 import java.util.ArrayList;
 
+/**
+ * The type Spell.
+ */
 public class Spell extends Card{
-   protected double Duration;
+    /**
+     * The Duration.
+     */
+    protected double Duration;
+    /**
+     * The Radius.
+     */
     protected double Radius;
+    /**
+     * The Area.
+     */
     protected ArrayList<Location> area;
+    /**
+     * The Rival.
+     */
     protected  ArrayList<Playground> rival;
+
+    /**
+     * Instantiates a new Spell.
+     */
     public Spell(){
         speed = Speed.MEDIUM;
     }
+
+    /**
+     * Find area.
+     */
     public void findArea()
     {
        int CenterRow=location.getRow();
@@ -49,6 +72,11 @@ public class Spell extends Card{
 
     }
 
+    /**
+     * Do action spell.
+     *
+     * @param playgrounds the playgrounds
+     */
     public void doActionSpell(ArrayList<Playground> playgrounds)
     {
         findArea();
@@ -56,6 +84,14 @@ public class Spell extends Card{
 
 
     }
+
+    /**
+     * Check boolean.
+     *
+     * @param row    the row
+     * @param column the column
+     * @return the boolean
+     */
     public boolean check(int row,int column)
     {
         if (row<0 && row >18)
@@ -68,6 +104,12 @@ public class Spell extends Card{
         }
         return true;
     }
+
+    /**
+     * Look up.
+     *
+     * @param playgrounds the playgrounds
+     */
     public void LookUp(ArrayList<Playground> playgrounds)
     {
         for (Playground p:playgrounds) {
@@ -99,10 +141,22 @@ public class Spell extends Card{
             }
         }
     }
+
+    /**
+     * Damage.
+     *
+     * @param p the p
+     */
     public void Damage(Playground p)
     {
          p.HP-=Damage;
     }
+
+    /**
+     * Increase.
+     *
+     * @param p the p
+     */
     public void Increase(Playground p)
     {
          p.Damage+=Damage*0.4;
@@ -119,6 +173,12 @@ public class Spell extends Card{
              p.speed=Speed.VERYFAST;
          }
     }
+
+    /**
+     * Dicrease.
+     *
+     * @param p the p
+     */
     public void Dicrease(Playground p)
     {
          p.Damage-=Damage*0.4;

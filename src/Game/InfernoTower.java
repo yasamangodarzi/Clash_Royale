@@ -1,7 +1,14 @@
 package Game;
 
+/**
+ * The type Inferno tower.
+ */
 public class InfernoTower extends Building{
     private int highDamage;
+
+    /**
+     * Instantiates a new Inferno tower.
+     */
     public InfernoTower() {
         HitSpeed=400;
         target=Target.AIR_GROUND;
@@ -11,6 +18,11 @@ public class InfernoTower extends Building{
         setCardName("InfernoTower");
     }
 
+    /**
+     * Sets high damage.
+     *
+     * @param highDamage the high damage
+     */
     public void setHighDamage(int highDamage) {
         this.highDamage = highDamage;
     }
@@ -30,6 +42,12 @@ public class InfernoTower extends Building{
                 ", speed=" + speed +
                 '}';
     }
+
+    /**
+     * Increse damage.
+     *
+     * @param playground the playground
+     */
     public void increseDamage(Playground playground)
     {
         if (CalculateRange(playground)<=6 && CalculateRange(playground)>5){Damage=Damage;}
@@ -40,6 +58,13 @@ public class InfernoTower extends Building{
         if (CalculateRange(playground)<= 1){Damage=highDamage;}
 
     }
+
+    /**
+     * Calculate range double.
+     *
+     * @param playground the playground
+     * @return the double
+     */
     public double CalculateRange(Playground playground)
     {
         int RowOrigin = playground.location.getRow();
