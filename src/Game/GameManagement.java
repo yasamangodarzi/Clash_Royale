@@ -44,7 +44,7 @@ public class GameManagement {
 
 
     public void StartGame(Player player1,Player player2){
-       // setGameManagement(player1, player2);
+         setGameManagement(player1, player2);
         System.out.println("set");
 
         long startTime = System.nanoTime();

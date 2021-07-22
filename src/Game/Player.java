@@ -1,6 +1,7 @@
 package Game;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Player {
     private  String username="";
@@ -10,6 +11,7 @@ public class Player {
     public ArrayList<Tower> towers=new ArrayList();
     public File file;
     private int xp=0;
+    public HashSet<Card> card1=new HashSet<>();
 
     public Player (String username) {
         level=level();

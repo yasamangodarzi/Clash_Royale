@@ -16,12 +16,14 @@ import java.util.List;
 public class Main extends Application {
     public static ArrayList<Player> players=new ArrayList<>();
     public static Player playercurent=new Player("yas");
+    public static Player playerRobat;
     public static PlayerInformation playerInformation=new PlayerInformation();
    public static GameHandler gameHandler=new GameHandler();
     static AnchorPane root;
     static List<Pane>grid=new ArrayList<>();
     private static int idx_cur=0;
     public static String robat;
+    static  GameManagement gameManagement=new GameManagement();
 //   public ArrayList<Scene>scenes=new ArrayList<>();
 //    public Stage windwo=new Stage();
 
@@ -49,8 +51,9 @@ public class Main extends Application {
             grid.add((Pane) FXMLLoader.load(getClass().getResource("WizardCard.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("Inferno TowerCard.fxml")));
             grid.add((Pane) FXMLLoader.load(getClass().getResource("CannonCard.fxml")));
-            //
+
             grid.add((Pane) FXMLLoader.load(getClass().getResource("HistoryGamePage.fxml")));
+            grid.add((Pane) FXMLLoader.load(getClass().getResource("game.fxml")));
 
             root.getChildren().add(grid.get(0));
             Scene scene=new Scene(root,500,800);

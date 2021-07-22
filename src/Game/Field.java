@@ -16,6 +16,7 @@ public class Field {
             }
         }
         map.put("barbarians",1);
+        map.put("",0);
         map.put("archer",2);
         map.put("babyDragon",3);
         map.put("wizard",4);
@@ -40,10 +41,10 @@ public class Field {
     public void Change(Card card, int row, int clo) {
         area[clo][row] = map.get(card.getCardName());
     }
-    public void lookup(Location location)
+    public String lookup(Location location)
     {
         String s=getKey(map,area[location.getColumn()][location.getRow()]);
-
+        return s;
     }
     public int[][] getArea() {
         return area;

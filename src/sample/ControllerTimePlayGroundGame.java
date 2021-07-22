@@ -29,9 +29,6 @@ public class ControllerTimePlayGroundGame {
         int hour = Integer.parseInt(strDetails[0]);
         int minute = Integer.parseInt(strDetails[1]);
         int second = Integer.parseInt(strDetails[2]);
-
-
-
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime currentTime = LocalTime.now();
             if (minute + 2 <= currentTime.getMinute() && second <= currentTime.getSecond() ||
@@ -42,12 +39,6 @@ public class ControllerTimePlayGroundGame {
                 time.setTextFill(Color.GREEN);
                 time.setText(currentTime.getHour() + ":" + currentTime.getMinute() + ":" + currentTime.getSecond());
             }
-
-            //To end the clock, set it to the background color
-//                if(currentTime.getSecond() - minute == 0 && currentTime.getMinute() - minute == 3){
-//                    time.setTextFill(Color.YELLOW);
-//                    time.setText("End of the game");
-//                }
         }),
                 new KeyFrame(Duration.seconds(1))
         );

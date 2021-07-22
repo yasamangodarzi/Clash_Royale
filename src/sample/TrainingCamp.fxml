@@ -13,17 +13,17 @@
             <Image url="@5zdHSF.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="SimpleRobot" layoutX="96.0" layoutY="159.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Simple robot" textFill="#fff8e1">
+      <Button fx:id="SimpleRobot" layoutX="96.0" layoutY="159.0" mnemonicParsing="false" onAction="#choice" onMousePressed="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Simple robot" textFill="#fff8e1">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="MediumRobot" layoutX="96.0" layoutY="294.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text=" Medium robot" textFill="#fff8e1">
+      <Button fx:id="MediumRobot" layoutX="96.0" layoutY="294.0" mnemonicParsing="false" onAction="#choice" onMousePressed="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text=" Medium robot" textFill="#fff8e1">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="30.0" />
          </font>
       </Button>
-      <Button fx:id="IntelligentRobot" layoutX="103.0" layoutY="422.0" mnemonicParsing="false" onAction="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Intelligent robot" textFill="#fff8e1">
+      <Button fx:id="IntelligentRobot" layoutX="103.0" layoutY="422.0" mnemonicParsing="false" onAction="#choice" onMousePressed="#choice" prefHeight="48.0" prefWidth="308.0" style="-fx-background-color: #870000;" text="Intelligent robot" textFill="#fff8e1">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="30.0" />
          </font>

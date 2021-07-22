@@ -4,6 +4,9 @@
 
 package sample;
 
+import Game.IntelligentRobot;
+import Game.Player;
+import Game.robot;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,15 +33,24 @@ public class ControllerTrainingCamp {
     void choice(ActionEvent event) {
         if (event.equals(SimpleRobot))
         {
+
             Main.setRobat("SimpleRobot");
+            Main.playerRobat=new robot(Main.robat,Main.playercurent.getXp());
+            Main.set(20);
+
         }
         if (event.equals(MediumRobot))
         {
             Main.setRobat("MediumRobot");
+
         }
         if (event.equals(IntelligentRobot))
         {
+
             Main.setRobat("IntelligentRobot");
+            Main.playerRobat=new IntelligentRobot(Main.robat,Main.playercurent.getXp());
+            Main.set(20);
+
         }
         ///change page
 
