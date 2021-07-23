@@ -49,7 +49,8 @@ public class Soldier extends Card{
       if (OpponentCard.size()>0 && checkElementAlive())
       {
            Attack(milsecond);
-      }else
+      }
+      else
       {
           Move(milsecond);
       }
@@ -84,12 +85,12 @@ public class Soldier extends Card{
             public void run() {
                 if (location.getColumn()<23)
             {
-                System.out.println("before column"+location.getColumn());
+                //System.out.println("before column"+location.getColumn());
                 location.setColumn(location.getColumn()+1);
-                System.out.println("after column"+location.getColumn());
+               // System.out.println("after column"+location.getColumn());
                 timefirst = milisecond;
-                System.out.println("Time" + timefirst);
-                System.out.println("mil" + milisecond);
+               // System.out.println("Time" + timefirst);
+               // System.out.println("mil" + milisecond);
                 // location.setRow(location.getRow()+1);
             }
             }

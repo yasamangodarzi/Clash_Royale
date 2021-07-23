@@ -27,9 +27,10 @@ public class Main {
 //        System.out.println( "-----------------");
         gameManagement.setGameManagement(player,player2);
         Barbarians barbarians=new Barbarians();
+
         Archer archer=new Archer();
         PEKKA pekka=new PEKKA();
-        pekka.HP=100;
+        pekka.HP=100000;
         pekka.alive=true;
         archer.HP=300;
         archer.alive=true;
@@ -43,10 +44,12 @@ public class Main {
         babyDragon.HP=100;
         babyDragon.alive=true;
         InfernoTower infernoTower=new InfernoTower();
-       barbarians.OpponentCard.add(pekka);
+//       barbarians.OpponentCard.add(pekka);
+//       barbarians.OpponentCard.add(cannon);
 //       babyDragon.OpponentCard.add(archer);
 //       babyDragon.OpponentCard.add(pekka);
-        gameManagement.addCard(barbarians,1,12,14);
+        cannon.OpponentCard.add(pekka);
+        gameManagement.addCard(cannon,1,12,14);
 
        // gameManagement.addCard(player.existCard.get(3),1,13,2);
 ////        System.out.println(player.existCard.size());

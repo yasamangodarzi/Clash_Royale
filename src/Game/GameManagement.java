@@ -120,8 +120,8 @@ public class GameManagement {
                     else if (c.HP>0)
                     {
                         c.doAction(timeElapsed);
-                        c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
-                               Player2,c.Range);
+                        //c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                           //    Player2,c.Range);
 
                     }
                     else
@@ -145,8 +145,8 @@ public class GameManagement {
                     else if (c.HP>0)
                     {
                         c.doAction(timeElapsed);
-                         c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
-                                 Player1,c.Range);
+                         //c.OpponentCard=c.DetectProximityTargetCard(c.getLocation().getRow(),c.getLocation().getColumn(),
+                                // Player1,c.Range);
                     }
                     else{
                         c.alive=false;
@@ -156,7 +156,7 @@ public class GameManagement {
                 timeElapsed = (endTime - startTime) / 1000000;
                 Different = (int)timeElapsed / 100000000;
 
-                if(Different/2==0 && first)
+                if(Different%2==0 && first)
                 {
 
                     elixirPlayer1.Change(true);
@@ -164,7 +164,7 @@ public class GameManagement {
                     first=false;
                 }
                 if(timeElapsed == 120000){
-                    if (Different/2==0)
+                    if (Different%2==0)
                     {
                         elixirPlayer1.Change(false);
                         elixirPlayer2.Change(false);

@@ -1,9 +1,8 @@
-package sample;
-
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import sample.Main;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,11 +11,11 @@ import java.util.ArrayList;
 
 public class ControllerBattleHistory {
 
-    String imageYesIcon = "C:\\Users\\Erfan\\IdeaProjects\\Clash_Royale\\src\\sample\\yesIcon.png";
-    String imageNoIcon = "C:\\Users\\Erfan\\IdeaProjects\\Clash_Royale\\src\\sample\\Noicon.png";
-    String imageInformationNo = "C:\\Users\\Erfan\\IdeaProjects\\Clash_Royale\\src\\sample\\informationNo.png";
-    String imageInformationLoser = "C:\\Users\\Erfan\\IdeaProjects\\Clash_Royale\\src\\sample\\informationIcon-Loser.png";
-    String imageInformationWinner = "C:\\Users\\Erfan\\IdeaProjects\\Clash_Royale\\src\\sample\\informationIcon-Winner.png";
+    String imageYesIcon = " D:\\untitled37\\src\\sample\\yesIcon.png";
+    String imageNoIcon = "D:\\untitled37\\src\\sample\\Noicon.png";
+    String imageInformationNo = "D:\\untitled37\\src\\sample\\informationNo.png";
+    String imageInformationLoser = "D:\\untitled37\\src\\sample\\informationIcon-Loser.png";
+    String imageInformationWinner = "D:\\untitled37\\src\\sample\\informationIcon-Winner.png";
     InputStream stream;
 
     @FXML
